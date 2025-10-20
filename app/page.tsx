@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
+import MassageCalculator from "@/components/MassageCalculator";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <Services />
+      <MassageCalculator />
       <Gallery />
       <Testimonials />
       <Newsletter />

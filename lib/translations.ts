@@ -94,16 +94,16 @@ export const translations = {
     views: "views",
 
     // Testimonials
-    testimonialsTitle: "CUSTOMER REVIEWS",
-    testimonial1Name: "Nguyen Thi Ha Nhi",
-    testimonial1Role: "Loyal Customer",
-    testimonial1Text: "The service quality here is excellent, staff are enthusiastic consultants. My skin has improved significantly after 3 treatments. Very satisfied!",
-    testimonial2Name: "Tran Minh Anh",
-    testimonial2Role: "VIP Customer",
-    testimonial2Text: "I have tried many other spas but only here I see real results. Modern technology, luxurious space.",
-    testimonial3Name: "Le Thi Mai",
-    testimonial3Role: "Customer",
-    testimonial3Text: "Reasonable prices, service quality exceeds expectations. The professional team is very professional and dedicated. Will come back!",
+    testimonialsTitle: "What Our Clients Say",
+    testimonial1Name: "Sarah Johnson",
+    testimonial1Role: "Regular Client",
+    testimonial1Text: "Best massage I've ever had! The therapists are incredibly skilled and the atmosphere is so relaxing. I come here every month and always leave feeling refreshed and rejuvenated.",
+    testimonial2Name: "Michael Chen",
+    testimonial2Role: "Couples Massage Client",
+    testimonial2Text: "My wife and I had the couples massage for our anniversary. It was absolutely perfect! Professional service, clean facilities, and the Hawaiian techniques are amazing. Highly recommend!",
+    testimonial3Name: "Emily Rodriguez",
+    testimonial3Role: "First-Time Visitor",
+    testimonial3Text: "I was a walk-in and they accommodated me right away. The foot massage was heavenly and the prices are very reasonable. Definitely my new go-to spot for relaxation!",
 
     // Newsletter
     newsletterTitle: "DISCOUNT - RECEIVE PROMOTIONAL NEWS",
