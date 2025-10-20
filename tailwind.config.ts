@@ -10,14 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#2d5f4f", // Green spa color
-          light: "#3d7f6f",
-          dark: "#1d4f3f",
+          DEFAULT: "#1e3a8a", // Deep blue
+          light: "#3b82f6",
+          dark: "#1e40af",
         },
         accent: {
-          DEFAULT: "#8fbc8f", // Light green
-          light: "#a8d5a8",
-          dark: "#6f9c6f",
+          DEFAULT: "#60a5fa", // Light blue
+          light: "#93c5fd",
+          dark: "#2563eb",
         },
       },
     },

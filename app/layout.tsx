@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Aloha Massage Spa - Chăm sóc sắc đẹp toàn diện",
-  description: "Aloha Massage Spa - Dịch vụ chăm sóc sắc đẹp và thư giãn hàng đầu Việt Nam",
+  title: "Royal Spa - Professional Beauty Care Services",
+  description: "Royal Spa - Leading beauty care and relaxation services in Vietnam",
 };
 
 export default function RootLayout({
@@ -12,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

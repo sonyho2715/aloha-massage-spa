@@ -2,18 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="bg-primary text-white text-sm py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <div>CHÀO MỜI VÀO SẾP HOÀNG HỒNG SPA</div>
+          <div>{t.headerTop}</div>
           <div className="flex gap-4">
-            <span>📞 +1 (808) 942-5000</span>
-            <span>✉ info@alohamassagespahi.com</span>
+            <span>📞 {t.phone}</span>
+            <span className="hidden md:inline">✉ {t.email}</span>
           </div>
         </div>
       </div>
@@ -22,28 +25,29 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-primary">
-            Hoàng Hồng Spa
+            Royal Spa
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-gray-700 hover:text-primary transition-colors">
-              Trang Chủ
+              {t.home}
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-primary transition-colors">
-              Giới Thiệu
+              {t.about}
             </Link>
             <Link href="/services" className="text-gray-700 hover:text-primary transition-colors">
-              Dịch Vụ
+              {t.services}
             </Link>
             <Link href="/gallery" className="text-gray-700 hover:text-primary transition-colors">
-              Hình Ảnh
+              {t.gallery}
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-primary transition-colors">
-              Liên Hệ
+              {t.contact}
             </Link>
+            <LanguageSwitcher />
             <button className="btn-primary">
-              Đặt Lịch Ngay
+              {t.bookNow}
             </button>
           </div>
 
@@ -72,22 +76,23 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4">
             <Link href="/" className="block text-gray-700 hover:text-primary transition-colors">
-              Trang Chủ
+              {t.home}
             </Link>
             <Link href="/about" className="block text-gray-700 hover:text-primary transition-colors">
-              Giới Thiệu
+              {t.about}
             </Link>
             <Link href="/services" className="block text-gray-700 hover:text-primary transition-colors">
-              Dịch Vụ
+              {t.services}
             </Link>
             <Link href="/gallery" className="block text-gray-700 hover:text-primary transition-colors">
-              Hình Ảnh
+              {t.gallery}
             </Link>
             <Link href="/contact" className="block text-gray-700 hover:text-primary transition-colors">
-              Liên Hệ
+              {t.contact}
             </Link>
+            <LanguageSwitcher />
             <button className="btn-primary w-full">
-              Đặt Lịch Ngay
+              {t.bookNow}
             </button>
           </div>
         )}

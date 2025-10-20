@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
+
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative bg-gradient-to-r from-primary/10 to-accent/10 py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -6,21 +12,20 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-              Chăm thượm may lần
-              <span className="block text-accent">lần nhất Việt Nam</span>
+              {t.heroTitle}
+              <span className="block text-accent">{t.heroSubtitle}</span>
             </h1>
 
             <p className="text-lg text-gray-600">
-              Trải nghiệm dịch vụ chăm sóc sắc đẹp đẳng cấp với công nghệ hiện đại
-              và đội ngũ chuyên viên giàu kinh nghiệm
+              {t.heroDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button className="btn-primary text-lg px-8 py-3">
-                Đặt Lịch Ngay
+                {t.bookNow}
               </button>
               <button className="btn-outline text-lg px-8 py-3">
-                Xem Dịch Vụ
+                {t.viewServices}
               </button>
             </div>
 
@@ -28,15 +33,15 @@ export default function Hero() {
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">10+</div>
-                <div className="text-sm text-gray-600">Năm Kinh Nghiệm</div>
+                <div className="text-sm text-gray-600">{t.yearsExp}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">50K+</div>
-                <div className="text-sm text-gray-600">Khách Hàng</div>
+                <div className="text-sm text-gray-600">{t.clients}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-gray-600">Hài Lòng</div>
+                <div className="text-sm text-gray-600">{t.satisfaction}</div>
               </div>
             </div>
           </div>
@@ -60,8 +65,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <div className="font-bold text-primary">Chứng Nhận</div>
-                  <div className="text-sm text-gray-600">Tiêu Chuẩn Quốc Tế</div>
+                  <div className="font-bold text-primary">{t.benefitBrand}</div>
+                  <div className="text-sm text-gray-600">{t.benefitBrandDesc}</div>
                 </div>
               </div>
             </div>
