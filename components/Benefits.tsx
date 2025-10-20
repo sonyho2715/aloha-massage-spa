@@ -7,22 +7,22 @@ export default function Benefits() {
 
   const benefits = [
     {
-      icon: "👥",
+      icon: "💆",
       title: t.benefitTeam,
       description: t.benefitTeamDesc
     },
     {
-      icon: "✓",
+      icon: "🌺",
       title: t.benefitBrand,
       description: t.benefitBrandDesc
     },
     {
-      icon: "🎯",
+      icon: "✨",
       title: t.benefitTech,
       description: t.benefitTechDesc
     },
     {
-      icon: "💼",
+      icon: "🕐",
       title: t.benefitService,
       description: t.benefitServiceDesc
     }

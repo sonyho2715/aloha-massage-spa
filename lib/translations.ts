@@ -23,25 +23,38 @@ export const translations = {
     satisfaction: "Satisfaction",
 
     // Benefits
-    benefitsTitle: "ALOHA MASSAGE SPA BENEFITS",
-    benefitTeam: "Expert Team",
-    benefitTeamDesc: "Experienced and dedicated professional staff",
-    benefitBrand: "Trusted Brand",
-    benefitBrandDesc: "Brand trusted by thousands of customers",
-    benefitTech: "Modern Equipment",
-    benefitTechDesc: "Latest technology and equipment",
-    benefitService: "Professional Service",
-    benefitServiceDesc: "Attentive and professional care service",
+    benefitsTitle: "Why Choose Aloha Massage Spa",
+    benefitTeam: "Licensed Therapists",
+    benefitTeamDesc: "Certified massage therapists with 10+ years of experience",
+    benefitBrand: "Hawaiian Tradition",
+    benefitBrandDesc: "Authentic Hawaiian massage techniques and aloha spirit",
+    benefitTech: "Clean & Relaxing",
+    benefitTechDesc: "Pristine facilities designed for ultimate relaxation",
+    benefitService: "Flexible Hours",
+    benefitServiceDesc: "Open 7 days a week, walk-ins welcome",
 
     // Services
-    servicesTitle: "MODERN TECHNOLOGY AT ROYAL SPA",
-    servicesSubtitle: "Royal Spa proudly features the most modern beauty technology system",
-    service1: "ADVANCED TECHNOLOGY IMPLEMENTATION",
-    service1Desc: "Application of the most advanced technology in beauty care",
-    service2: "PROFESSIONAL FACIAL TREATMENT WITH STANDARD TECHNOLOGY",
-    service2Desc: "In-depth facial treatment with Korean standard technology",
-    service3: "PERMANENT HAIR REMOVAL, FAT REDUCTION, NON-INVASIVE",
-    service3Desc: "Modern hair removal technology, safe and effective",
+    servicesTitle: "Our Services",
+    servicesSubtitle: "Experience authentic Hawaiian massage therapy with our professional services",
+
+    footMassageTitle: "Foot Massage",
+    footMassageDesc: "Relax and rejuvenate with our therapeutic foot massage",
+
+    fullBodyTitle: "Full Body Massage",
+    fullBodyDesc: "Complete relaxation with our signature full body massage therapy",
+
+    customMassageTitle: "30 Minute Custom Massage",
+    customMassageDesc: "Customized massage focused on your specific needs",
+
+    comboMassageTitle: "Combination Massage",
+    comboMassageDesc: "Blend of foot and body massage for ultimate relaxation",
+
+    couplesMassageTitle: "Couples Full Body Massage",
+    couplesMassageDesc: "Share the relaxation experience with your loved one",
+
+    minutes: "minutes",
+    mostPopular: "Most Popular",
+    walkInsWelcome: "Walk-ins welcome! Call us to check availability",
     hot: "Hot",
     viewMore: "View More",
 
@@ -137,25 +150,38 @@ export const translations = {
     satisfaction: "Hài Lòng",
 
     // Benefits
-    benefitsTitle: "LỢI ÍCH VỀ HOÀNG HỒNG SPA",
-    benefitTeam: "Đội ngũ chuyên gia",
-    benefitTeamDesc: "Đội ngũ chuyên viên giàu kinh nghiệm, tận tâm",
-    benefitBrand: "Thương hiệu uy tín",
-    benefitBrandDesc: "Thương hiệu được hàng ngàn khách hàng tin tưởng",
-    benefitTech: "Máy móc hiện đại",
-    benefitTechDesc: "Công nghệ và thiết bị hiện đại nhất",
-    benefitService: "Phục vụ chuyên nghiệp",
-    benefitServiceDesc: "Dịch vụ chăm sóc chu đáo và chuyên nghiệp",
+    benefitsTitle: "Tại Sao Chọn Aloha Massage Spa",
+    benefitTeam: "Nhà Trị Liệu Có Giấy Phép",
+    benefitTeamDesc: "Chuyên gia massage được chứng nhận với hơn 10 năm kinh nghiệm",
+    benefitBrand: "Truyền Thống Hawaii",
+    benefitBrandDesc: "Kỹ thuật massage Hawaii chân thực và tinh thần aloha",
+    benefitTech: "Sạch Sẽ & Thư Giãn",
+    benefitTechDesc: "Cơ sở vật chất sạch sẽ được thiết kế để thư giãn tối đa",
+    benefitService: "Giờ Linh Hoạt",
+    benefitServiceDesc: "Mở cửa 7 ngày một tuần, chào đón khách ghé thăm",
 
     // Services
-    servicesTitle: "CÔNG NGHỆ HIỆN ĐẠI TẠI HOÀNG HỒNG SPA",
-    servicesSubtitle: "Hoàng Hồng Spa tự hào sở hữu hệ thống công nghệ làm đẹp hiện đại nhất",
-    service1: "THỰC HIỆN HOÀNG HỒNG CÔNG NGHỆ HIỆN ĐẠI",
-    service1Desc: "Ứng dụng công nghệ tiên tiến nhất trong lĩnh vực chăm sóc sắc đẹp",
-    service2: "TRỊ LIỆU DA MẶT CHUYÊN CÔNG NGHỆ HOÀNG HỒNG CHUẨN",
-    service2Desc: "Liệu trình điều trị da chuyên sâu với công nghệ chuẩn Hàn Quốc",
-    service3: "TRIỆT LÔNG VÔ ƯU DI, GIẢM MỠ, KHÔNG LÀM TỔN",
-    service3Desc: "Công nghệ triệt lông hiện đại, an toàn và hiệu quả",
+    servicesTitle: "Dịch Vụ Của Chúng Tôi",
+    servicesSubtitle: "Trải nghiệm liệu pháp massage Hawaii chân thực với dịch vụ chuyên nghiệp của chúng tôi",
+
+    footMassageTitle: "Massage Chân",
+    footMassageDesc: "Thư giãn và trẻ hóa với massage chân trị liệu của chúng tôi",
+
+    fullBodyTitle: "Massage Toàn Thân",
+    fullBodyDesc: "Thư giãn hoàn toàn với liệu pháp massage toàn thân đặc trưng của chúng tôi",
+
+    customMassageTitle: "Massage Tùy Chỉnh 30 Phút",
+    customMassageDesc: "Massage tùy chỉnh tập trung vào nhu cầu cụ thể của bạn",
+
+    comboMassageTitle: "Massage Kết Hợp",
+    comboMassageDesc: "Kết hợp massage chân và toàn thân để thư giãn tối đa",
+
+    couplesMassageTitle: "Massage Toàn Thân Cho Cặp Đôi",
+    couplesMassageDesc: "Chia sẻ trải nghiệm thư giãn với người thân yêu của bạn",
+
+    minutes: "phút",
+    mostPopular: "Phổ Biến Nhất",
+    walkInsWelcome: "Chào đón khách ghé thăm! Gọi cho chúng tôi để kiểm tra tình trạng",
     hot: "Hot",
     viewMore: "Xem Thêm",
 
@@ -251,25 +277,38 @@ export const translations = {
     satisfaction: "满意度",
 
     // Benefits
-    benefitsTitle: "皇家水疗优势",
-    benefitTeam: "专家团队",
-    benefitTeamDesc: "经验丰富、尽心尽责的专业人员",
-    benefitBrand: "可信品牌",
-    benefitBrandDesc: "受数千客户信赖的品牌",
-    benefitTech: "现代设备",
-    benefitTechDesc: "最新技术和设备",
-    benefitService: "专业服务",
-    benefitServiceDesc: "周到专业的护理服务",
+    benefitsTitle: "为什么选择阿罗哈按摩水疗中心",
+    benefitTeam: "持证按摩师",
+    benefitTeamDesc: "拥有10年以上经验的认证按摩治疗师",
+    benefitBrand: "夏威夷传统",
+    benefitBrandDesc: "正宗的夏威夷按摩技术和阿罗哈精神",
+    benefitTech: "清洁放松",
+    benefitTechDesc: "专为终极放松而设计的清洁设施",
+    benefitService: "营业时间灵活",
+    benefitServiceDesc: "每周7天营业，欢迎随时光临",
 
     // Services
-    servicesTitle: "皇家水疗的现代技术",
-    servicesSubtitle: "皇家水疗自豪地拥有最现代的美容技术系统",
-    service1: "先进技术实施",
-    service1Desc: "应用美容护理领域最先进的技术",
-    service2: "标准技术专业面部护理",
-    service2Desc: "采用韩国标准技术的深度面部治疗",
-    service3: "永久脱毛、减脂、非侵入性",
-    service3Desc: "现代脱毛技术，安全有效",
+    servicesTitle: "我们的服务",
+    servicesSubtitle: "体验我们专业服务提供的正宗夏威夷按摩疗法",
+
+    footMassageTitle: "足部按摩",
+    footMassageDesc: "通过我们的治疗性足部按摩放松和恢复活力",
+
+    fullBodyTitle: "全身按摩",
+    fullBodyDesc: "通过我们标志性的全身按摩疗法完全放松",
+
+    customMassageTitle: "30分钟定制按摩",
+    customMassageDesc: "专注于您特定需求的定制按摩",
+
+    comboMassageTitle: "组合按摩",
+    comboMassageDesc: "足部和身体按摩的结合，实现终极放松",
+
+    couplesMassageTitle: "情侣全身按摩",
+    couplesMassageDesc: "与您所爱的人分享放松体验",
+
+    minutes: "分钟",
+    mostPopular: "最受欢迎",
+    walkInsWelcome: "欢迎随时光临！请致电咨询是否有空位",
     hot: "热门",
     viewMore: "查看更多",
 
@@ -365,25 +404,38 @@ export const translations = {
     satisfaction: "満足度",
 
     // Benefits
-    benefitsTitle: "ロイヤルスパの利点",
-    benefitTeam: "専門家チーム",
-    benefitTeamDesc: "経験豊富で献身的な専門スタッフ",
-    benefitBrand: "信頼のブランド",
-    benefitBrandDesc: "数千人のお客様に信頼されているブランド",
-    benefitTech: "最新設備",
-    benefitTechDesc: "最新の技術と設備",
-    benefitService: "プロフェッショナルサービス",
-    benefitServiceDesc: "行き届いた専門的なケアサービス",
+    benefitsTitle: "アロハマッサージスパを選ぶ理由",
+    benefitTeam: "有資格セラピスト",
+    benefitTeamDesc: "10年以上の経験を持つ認定マッサージセラピスト",
+    benefitBrand: "ハワイアン伝統",
+    benefitBrandDesc: "本格的なハワイアンマッサージ技術とアロハスピリット",
+    benefitTech: "清潔でリラックス",
+    benefitTechDesc: "究極のリラクゼーションのために設計された清潔な施設",
+    benefitService: "柔軟な営業時間",
+    benefitServiceDesc: "週7日営業、予約なしでもご利用いただけます",
 
     // Services
-    servicesTitle: "ロイヤルスパの最新技術",
-    servicesSubtitle: "ロイヤルスパは最新のビューティー技術システムを誇りを持って提供しています",
-    service1: "先進技術の導入",
-    service1Desc: "ビューティーケア分野における最先端技術の応用",
-    service2: "標準技術によるプロフェッショナル・フェイシャルトリートメント",
-    service2Desc: "韓国標準技術による専門的な肌治療",
-    service3: "永久脱毛、脂肪減少、非侵襲的",
-    service3Desc: "安全で効果的な最新脱毛技術",
+    servicesTitle: "私たちのサービス",
+    servicesSubtitle: "プロフェッショナルサービスで本格的なハワイアンマッサージセラピーを体験してください",
+
+    footMassageTitle: "フットマッサージ",
+    footMassageDesc: "セラピューティックなフットマッサージでリラックスして若返りましょう",
+
+    fullBodyTitle: "全身マッサージ",
+    fullBodyDesc: "シグネチャー全身マッサージセラピーで完全なリラクゼーション",
+
+    customMassageTitle: "30分カスタムマッサージ",
+    customMassageDesc: "お客様の特定のニーズに焦点を当てたカスタマイズマッサージ",
+
+    comboMassageTitle: "コンビネーションマッサージ",
+    comboMassageDesc: "究極のリラクゼーションのためのフットとボディマッサージのブレンド",
+
+    couplesMassageTitle: "カップル全身マッサージ",
+    couplesMassageDesc: "大切な人とリラクゼーション体験を共有しましょう",
+
+    minutes: "分",
+    mostPopular: "最も人気",
+    walkInsWelcome: "予約なしでもご利用いただけます！空き状況をお電話でご確認ください",
     hot: "人気",
     viewMore: "もっと見る",
 
