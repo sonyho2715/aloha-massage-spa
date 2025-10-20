@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Royal Spa</h3>
+            <h3 className="text-xl font-bold mb-4">Aloha Massage Spa</h3>
             <p className="text-white/80 mb-4">
               {t.footerAbout}
             </p>

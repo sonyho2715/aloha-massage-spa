@@ -25,7 +25,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-primary">
-            Royal Spa
+            Aloha Massage Spa
           </Link>
 
           {/* Desktop Navigation */}

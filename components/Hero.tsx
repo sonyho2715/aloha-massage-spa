@@ -46,12 +46,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Image */}
+          {/* Right Video */}
           <div className="relative">
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80"
-                alt="Beautiful woman at spa"
+              <video
+                src="https://video.wixstatic.com/video/16897f_16fe500669d04342aba34ce506424677/1080p/mp4/file.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-auto"
               />
             </div>

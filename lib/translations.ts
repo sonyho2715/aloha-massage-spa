@@ -3,8 +3,8 @@ export type Language = 'en' | 'vi' | 'zh' | 'ja';
 export const translations = {
   en: {
     // Header
-    headerTop: "WELCOME TO ROYAL SPA",
-    phone: "+1 (808) 942-5000",
+    headerTop: "WELCOME TO ALOHA MASSAGE SPA",
+    phone: "(808) 912-1000",
     email: "info@alohamassagespahi.com",
     home: "Home",
     about: "About",
@@ -14,16 +14,16 @@ export const translations = {
     bookNow: "Book Now",
 
     // Hero
-    heroTitle: "Professional Beauty Care",
-    heroSubtitle: "in Vietnam",
-    heroDescription: "Experience world-class beauty care services with modern technology and highly experienced professional team",
+    heroTitle: "Professional Massage Therapy",
+    heroSubtitle: "in Hawaii",
+    heroDescription: "Experience authentic Hawaiian relaxation and healing with our professional massage services",
     viewServices: "View Services",
     yearsExp: "Years Experience",
     clients: "Clients",
     satisfaction: "Satisfaction",
 
     // Benefits
-    benefitsTitle: "ROYAL SPA BENEFITS",
+    benefitsTitle: "ALOHA MASSAGE SPA BENEFITS",
     benefitTeam: "Expert Team",
     benefitTeamDesc: "Experienced and dedicated professional staff",
     benefitBrand: "Trusted Brand",
@@ -100,18 +100,18 @@ export const translations = {
     privacyNote: "* We are committed to protecting your information",
 
     // Footer
-    footerAbout: "Leading beauty care center with modern technology and professional services.",
+    footerAbout: "Professional massage therapy center providing authentic Hawaiian relaxation and healing services.",
     quickLinks: "Quick Links",
     servicesLink: "Services",
     footerServices: "Services",
-    acneTreatment: "Deep acne treatment",
-    malasmaTreatment: "Melasma, freckles treatment",
-    hairRemoval: "High-tech hair removal",
-    skinRejuvenation: "Facial rejuvenation",
-    fatReduction: "Fat reduction, fat melting",
+    acneTreatment: "Foot Massage",
+    malasmaTreatment: "Full Body Massage",
+    hairRemoval: "Custom Massage",
+    skinRejuvenation: "Combination Massage",
+    fatReduction: "Couple Massage",
     contactInfo: "Contact",
-    address: "123 ABC Street, District 1, HCMC",
-    hours: "8:00 - 22:00 (Daily)",
+    address: "Honolulu, Hawaii",
+    hours: "9:00 AM - 9:00 PM (Daily)",
     allRightsReserved: "All rights reserved",
   },
 
