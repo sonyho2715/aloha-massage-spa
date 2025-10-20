@@ -1,28 +1,29 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
+import Image from "next/image";
 
 export default function Benefits() {
   const { t } = useLanguage();
 
   const benefits = [
     {
-      icon: "💆",
+      image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=400&h=400&fit=crop",
       title: t.benefitTeam,
       description: t.benefitTeamDesc
     },
     {
-      icon: "🌺",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=400&fit=crop",
       title: t.benefitBrand,
       description: t.benefitBrandDesc
     },
     {
-      icon: "✨",
+      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=400&fit=crop",
       title: t.benefitTech,
       description: t.benefitTechDesc
     },
     {
-      icon: "🕐",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=400&fit=crop",
       title: t.benefitService,
       description: t.benefitServiceDesc
     }
@@ -36,8 +37,14 @@ export default function Benefits() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center group">
-              <div className="w-24 h-24 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-4xl mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                {benefit.icon}
+              <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden shadow-lg group-hover:scale-110 transition-all duration-300">
+                <Image
+                  src={benefit.image}
+                  alt={benefit.title}
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
               </div>
               <h3 className="text-xl font-bold text-primary mb-2">
                 {benefit.title}

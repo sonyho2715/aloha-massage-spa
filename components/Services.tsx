@@ -13,9 +13,8 @@ export default function Services() {
       price30: "$35",
       duration60: "60",
       price60: "$55",
-      icon: "🦶",
       popular: false,
-      image: "/images/couples-massage.jpg",
+      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&h=600&fit=crop",
     },
     {
       titleKey: "fullBodyTitle",
@@ -24,18 +23,16 @@ export default function Services() {
       price30: "$70",
       duration60: "90",
       price60: "$110",
-      icon: "💆",
       popular: true,
-      image: "/images/IMG_6276.jpg",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop",
     },
     {
       titleKey: "customMassageTitle",
       descriptionKey: "customMassageDesc",
       duration30: "30",
       price30: "$45",
-      icon: "✨",
       popular: false,
-      image: "/images/couples-massage-1-1024x679.jpg",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&h=600&fit=crop",
     },
     {
       titleKey: "comboMassageTitle",
@@ -44,9 +41,8 @@ export default function Services() {
       price30: "$80",
       duration60: "90",
       price60: "$120",
-      icon: "🌺",
       popular: false,
-      image: "/images/IMG_6261.jpg",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
     },
     {
       titleKey: "couplesMassageTitle",
@@ -55,9 +51,8 @@ export default function Services() {
       price30: "$140",
       duration60: "90",
       price60: "$220",
-      icon: "💑",
       popular: true,
-      image: "/images/couples-massage-1-1024x679.jpg",
+      image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop",
     },
   ];
 
@@ -88,7 +83,6 @@ export default function Services() {
               )}
 
               <div className="p-8">
-                <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-primary mb-3">
                   {t[service.titleKey as keyof typeof t]}
                 </h3>

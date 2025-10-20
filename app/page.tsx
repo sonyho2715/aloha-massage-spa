@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import MassageRecommender from "@/components/MassageRecommender";
-import Testimonials from "@/components/Testimonials";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
@@ -15,7 +14,6 @@ export default function Home() {
       <Benefits />
       <Services />
       <MassageRecommender />
-      <Testimonials />
       <Newsletter />
       <Footer />
     </main>

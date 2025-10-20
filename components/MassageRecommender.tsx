@@ -89,7 +89,6 @@ export default function MassageRecommender() {
   const services = {
     foot: {
       name: "Foot Massage",
-      icon: "🦶",
       description: "Perfect for relieving foot fatigue and promoting overall relaxation through reflexology",
       duration: "30 or 60 minutes",
       price: "$35-$55",
@@ -98,7 +97,6 @@ export default function MassageRecommender() {
     },
     full: {
       name: "Full Body Massage",
-      icon: "💆",
       description: "Complete relaxation with our signature Hawaiian-inspired techniques for total body wellness",
       duration: "60 or 90 minutes",
       price: "$70-$110",
@@ -107,7 +105,6 @@ export default function MassageRecommender() {
     },
     custom: {
       name: "Custom Massage",
-      icon: "✨",
       description: "Targeted therapeutic work focused on your specific problem areas and needs",
       duration: "30 minutes",
       price: "$45",
@@ -116,7 +113,6 @@ export default function MassageRecommender() {
     },
     combo: {
       name: "Combination Massage",
-      icon: "🌺",
       description: "Best of both worlds - foot massage combined with upper body work for comprehensive care",
       duration: "60 or 90 minutes",
       price: "$80-$120",
@@ -125,7 +121,6 @@ export default function MassageRecommender() {
     },
     couples: {
       name: "Couples Massage",
-      icon: "💑",
       description: "Share the healing experience with your loved one in our private couples suite",
       duration: "60 or 90 minutes",
       price: "$140-$220",
@@ -192,17 +187,14 @@ export default function MassageRecommender() {
 
             {/* Primary Recommendation */}
             <div className="bg-gradient-to-br from-primary to-accent text-white rounded-2xl shadow-2xl p-8 md:p-12 mb-6">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-6xl">{primaryService.icon}</div>
-                <div>
-                  <div className="text-sm opacity-90 mb-1">Best Match For You</div>
-                  <h3 className="text-3xl font-bold">{primaryService.name}</h3>
-                  {primaryService.popular && (
-                    <span className="inline-block mt-2 bg-white/20 px-3 py-1 rounded-full text-sm">
-                      ⭐ Most Popular
-                    </span>
-                  )}
-                </div>
+              <div className="mb-6">
+                <div className="text-sm opacity-90 mb-1">Best Match For You</div>
+                <h3 className="text-3xl font-bold">{primaryService.name}</h3>
+                {primaryService.popular && (
+                  <span className="inline-block mt-2 bg-white/20 px-3 py-1 rounded-full text-sm">
+                    ⭐ Most Popular
+                  </span>
+                )}
               </div>
 
               <p className="text-xl mb-6 opacity-95">{primaryService.description}</p>
@@ -244,12 +236,9 @@ export default function MassageRecommender() {
             {/* Secondary Recommendation */}
             <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-6">
               <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="text-4xl">{secondaryService.icon}</div>
-                  <div>
-                    <div className="text-sm text-gray-600">Also Great For You</div>
-                    <h4 className="text-xl font-bold text-primary">{secondaryService.name}</h4>
-                  </div>
+                <div>
+                  <div className="text-sm text-gray-600">Also Great For You</div>
+                  <h4 className="text-xl font-bold text-primary">{secondaryService.name}</h4>
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-gray-600">Match Score</div>

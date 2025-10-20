@@ -12,12 +12,11 @@ export default function ServicesPage() {
     {
       id: "foot-massage",
       title: "Foot Massage",
-      icon: "🦶",
       tagline: "Rejuvenate from the ground up",
       description: "Experience the ultimate relaxation with our therapeutic foot massage. Your feet carry you through life – give them the care they deserve.",
       duration: "30 or 60 minutes",
       prices: { "30 min": "$35", "60 min": "$55" },
-      image: "/images/couples-massage.jpg",
+      image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=800&fit=crop",
       benefits: [
         "Relieves tension and reduces foot pain",
         "Improves blood circulation",
@@ -33,12 +32,11 @@ export default function ServicesPage() {
     {
       id: "full-body",
       title: "Full Body Massage",
-      icon: "💆",
       tagline: "Complete relaxation from head to toe",
       description: "Our signature full body massage is designed to melt away tension and restore balance to your body, mind, and spirit using authentic Hawaiian techniques.",
       duration: "60 or 90 minutes",
       prices: { "60 min": "$70", "90 min": "$110" },
-      image: "/images/IMG_6276.jpg",
+      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=800&fit=crop",
       popular: true,
       benefits: [
         "Reduces muscle tension and chronic pain",
@@ -56,12 +54,11 @@ export default function ServicesPage() {
     {
       id: "custom-massage",
       title: "30 Minute Custom Massage",
-      icon: "✨",
       tagline: "Targeted relief where you need it most",
       description: "Short on time but need relief? Our 30-minute custom massage targets your specific problem areas with focused therapeutic work.",
       duration: "30 minutes",
       prices: { "30 min": "$45" },
-      image: "/images/couples-massage-1-1024x679.jpg",
+      image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&h=800&fit=crop",
       benefits: [
         "Focused relief for specific problem areas",
         "Perfect for busy schedules",
@@ -77,12 +74,11 @@ export default function ServicesPage() {
     {
       id: "combination",
       title: "Combination Massage",
-      icon: "🌺",
       tagline: "The best of both worlds",
       description: "Can't decide between foot and body massage? Get both! This popular combination service gives you the perfect blend of relaxation and therapeutic benefit.",
       duration: "60 or 90 minutes",
       prices: { "60 min": "$80", "90 min": "$120" },
-      image: "/images/IMG_6261.jpg",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=800&fit=crop",
       benefits: [
         "Complete body and foot rejuvenation",
         "Enhanced circulation throughout entire body",
@@ -98,12 +94,11 @@ export default function ServicesPage() {
     {
       id: "couples",
       title: "Couples Full Body Massage",
-      icon: "💑",
       tagline: "Share the healing experience",
       description: "Connect and relax together with our couples massage. Two therapists work simultaneously in our couples suite, creating a shared wellness experience perfect for partners, friends, or family.",
       duration: "60 or 90 minutes",
       prices: { "60 min": "$140", "90 min": "$220" },
-      image: "/images/couples-massage-1-1024x679.jpg",
+      image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&h=800&fit=crop",
       popular: true,
       benefits: [
         "Shared relaxation experience",
@@ -149,7 +144,6 @@ export default function ServicesPage() {
             <div className="max-w-6xl mx-auto">
               {/* Service Header */}
               <div className="text-center mb-12">
-                <div className="text-6xl mb-4">{service.icon}</div>
                 <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
                   {service.title}
                   {service.popular && (
