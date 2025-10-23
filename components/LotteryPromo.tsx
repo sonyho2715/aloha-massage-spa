@@ -33,8 +33,8 @@ export default function LotteryPromo() {
             <div className="relative">
               <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=800&h=800&fit=crop"
-                  alt="Lottery Winner"
+                  src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=800&fit=crop"
+                  alt="Hand Picking Lottery Ticket"
                   fill
                   className="object-cover"
                 />
@@ -112,7 +112,7 @@ export default function LotteryPromo() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:8089121000"
+                  href="tel:8089425000"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-white font-bold text-lg py-4 px-8 rounded-full hover:shadow-2xl transition-all transform hover:scale-105"
                 >
                   📞 Book Your Visit Now

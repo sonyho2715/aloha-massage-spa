@@ -15,8 +15,8 @@ export const translations = {
 
     // Hero
     heroTitle: "Feel the True Spirit of Aloha",
-    heroSubtitle: "Where Ancient Hawaiian Healing Meets Modern Wellness",
-    heroDescription: "Step into our peaceful sanctuary in the heart of Honolulu. Since 2019, we've welcomed over 50,000 guests with the warmth of Hawaiian hospitality and the healing touch of our licensed therapists. Come as you are—walk-ins always welcome.",
+    heroSubtitle: "Authentic Hawaiian Massage Therapy",
+    heroDescription: "Professional licensed therapists providing authentic Hawaiian healing in Honolulu since 2019. Over 50,000 happy guests. Walk-ins welcome.",
     viewServices: "View Our Services",
     yearsExp: "Since 2019",
     clients: "Happy Guests",

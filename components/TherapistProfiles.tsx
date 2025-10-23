@@ -18,7 +18,7 @@ export default function TherapistProfiles() {
       description: language === 'en' ? "Angela brings the heart of aloha to every session. Known for her warm welcome and genuine care, she treats every guest like family. Her expert hands and wise advice create a truly healing experience." :
                    language === 'vi' ? "Angela mang trái tim aloha đến mỗi buổi trị liệu. Được biết đến với sự chào đón ấm áp và quan tâm chân thành, cô đối xử với mọi khách như gia đình. Đôi bàn tay chuyên nghiệp và lời khuyên khôn ngoan của cô tạo nên trải nghiệm chữa lành thực sự." :
                    language === 'zh' ? "Angela为每次疗程带来阿罗哈精神。以热情欢迎和真诚关怀而闻名，她像对待家人一样对待每位客人。她专业的双手和明智的建议创造了真正的治愈体验。" : "Angelaは毎回のセッションにアロハの心を持ち込みます。温かい歓迎と誠実なケアで知られ、すべてのゲストを家族のように扱います。彼女の熟練した手と賢明なアドバイスは、真の癒しの体験を生み出します。",
-      image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop"
+      image: ""
     },
     {
       name: "Tony",
@@ -60,9 +60,9 @@ export default function TherapistProfiles() {
              language === 'zh' ? "认识您的治愈之手" : "あなたの癒しの手に会う"}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {language === 'en' ? "Our licensed therapists bring decades of combined experience and genuine aloha spirit to every session" :
-             language === 'vi' ? "Các nhà trị liệu có giấy phép của chúng tôi mang đến nhiều thập kỷ kinh nghiệm kết hợp và tinh thần aloha chân thực cho mỗi buổi" :
-             language === 'zh' ? "我们持证的治疗师为每次疗程带来数十年的综合经验和真正的阿罗哈精神" : "私たちの有資格セラピストは、数十年にわたる総合経験と本物のアロハスピリットをすべてのセッションにもたらします"}
+            {language === 'en' ? "Meet our featured therapists. We have a team of professional licensed therapists with decades of combined experience and genuine aloha spirit." :
+             language === 'vi' ? "Gặp gỡ các nhà trị liệu nổi bật của chúng tôi. Chúng tôi có một đội ngũ nhà trị liệu chuyên nghiệp có giấy phép với nhiều thập kỷ kinh nghiệm kết hợp và tinh thần aloha chân thực." :
+             language === 'zh' ? "认识我们的特色治疗师。我们拥有一支专业的持证治疗师团队，拥有数十年的综合经验和真正的阿罗哈精神。" : "私たちの注目のセラピストに会いましょう。私たちは、数十年にわたる総合経験と本物のアロハスピリットを持つプロの有資格セラピストのチームを持っています。"}
           </p>
         </div>
 
