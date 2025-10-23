@@ -121,7 +121,7 @@ export default function Services() {
             {t.walkInsWelcome}
           </p>
           <a
-            href="tel:8089121000"
+            href="tel:8089425000"
             className="inline-block bg-accent hover:bg-accent-dark text-white font-bold text-xl py-4 px-8 rounded-full transition-colors"
           >
             📞 {t.phone}

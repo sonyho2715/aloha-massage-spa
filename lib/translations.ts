@@ -3,8 +3,8 @@ export type Language = 'en' | 'vi' | 'zh' | 'ja';
 export const translations = {
   en: {
     // Header
-    headerTop: "WELCOME TO ALOHA MASSAGE SPA",
-    phone: "(808) 912-1000",
+    headerTop: "Open Daily 10 AM - 11 PM • Walk-ins Welcome",
+    phone: "(808) 942-5000",
     email: "info@alohamassagespahi.com",
     home: "Home",
     about: "About",
@@ -14,47 +14,47 @@ export const translations = {
     bookNow: "Book Now",
 
     // Hero
-    heroTitle: "Professional Massage Therapy",
-    heroSubtitle: "in Hawaii",
-    heroDescription: "Experience authentic Hawaiian relaxation and healing with our professional massage services",
-    viewServices: "View Services",
-    yearsExp: "Years Experience",
-    clients: "Clients",
-    satisfaction: "Satisfaction",
+    heroTitle: "Feel the True Spirit of Aloha",
+    heroSubtitle: "Where Ancient Hawaiian Healing Meets Modern Wellness",
+    heroDescription: "Step into our peaceful sanctuary in the heart of Honolulu. Since 2019, we've welcomed over 50,000 guests with the warmth of Hawaiian hospitality and the healing touch of our licensed therapists. Come as you are—walk-ins always welcome.",
+    viewServices: "View Our Services",
+    yearsExp: "Since 2019",
+    clients: "Happy Guests",
+    satisfaction: "4.7★ Reviews",
 
     // Benefits
-    benefitsTitle: "Why Choose Aloha Massage Spa",
-    benefitTeam: "Licensed Therapists",
-    benefitTeamDesc: "Certified massage therapists with 10+ years of experience",
-    benefitBrand: "Hawaiian Tradition",
-    benefitBrandDesc: "Authentic Hawaiian massage techniques and aloha spirit",
-    benefitTech: "Clean & Relaxing",
-    benefitTechDesc: "Pristine facilities designed for ultimate relaxation",
-    benefitService: "Flexible Hours",
-    benefitServiceDesc: "Open 7 days a week, walk-ins welcome",
+    benefitsTitle: "The Aloha Difference",
+    benefitTeam: "Expert Hands, Healing Hearts",
+    benefitTeamDesc: "Our licensed therapists average 10+ years experience. Angela, Tony, and Andy each bring unique strengths—request your favorite!",
+    benefitBrand: "Aloha Spirit in Every Touch",
+    benefitBrandDesc: "We honor traditional Hawaiian lomi lomi techniques blended with Swedish, deep tissue, and reflexology methods",
+    benefitTech: "Your Peaceful Sanctuary",
+    benefitTechDesc: "Soft lighting, soothing music, organic aromatherapy—every detail designed for your complete relaxation",
+    benefitService: "Here When You Need Us",
+    benefitServiceDesc: "Open 7 days, 10 AM-11 PM. Late-night appointments after work? Sunday self-care? We've got you.",
 
     // Services
-    servicesTitle: "Our Services",
-    servicesSubtitle: "Experience authentic Hawaiian massage therapy with our professional services",
+    servicesTitle: "Healing Journeys for Every Need",
+    servicesSubtitle: "From quick relief to complete renewal, each treatment uses organic Hawaiian oils and expert techniques passed down through generations",
 
-    footMassageTitle: "Foot Massage",
-    footMassageDesc: "Relax and rejuvenate with our therapeutic foot massage",
+    footMassageTitle: "Foot Massage - Your Journey Begins Here",
+    footMassageDesc: "Melt away travel fatigue and everyday stress. Feel tension dissolve as organic Hawaiian kukui nut oil soothes tired feet and restores your natural energy flow. Perfect after long flights, beach walks, or exploring the island.",
 
-    fullBodyTitle: "Full Body Massage",
-    fullBodyDesc: "Complete relaxation with our signature full body massage therapy",
+    fullBodyTitle: "Full Body Massage - The Island Escape",
+    fullBodyDesc: "Surrender to complete relaxation with our signature lomi lomi-inspired massage. Angela, Tony, or Andy will customize pressure to your preference—from gentle Swedish strokes to deep tissue relief—using organic essential oils with Hawaiian botanicals. What guests say: 'Best massage I've ever had!'",
 
-    customMassageTitle: "30 Minute Custom Massage",
-    customMassageDesc: "Customized massage focused on your specific needs",
+    customMassageTitle: "30-Minute Targeted Relief",
+    customMassageDesc: "Short on time? Focus on what hurts most. Perfect for neck and shoulders, lower back, or those stubborn knots. Quick but powerful relief when you need it.",
 
-    comboMassageTitle: "Combination Massage",
-    comboMassageDesc: "Blend of foot and body massage for ultimate relaxation",
+    comboMassageTitle: "Combination Massage - Best of Both",
+    comboMassageDesc: "Why choose? Enjoy the grounding benefits of foot reflexology combined with upper body relief. Your feet and shoulders will thank you. Our most popular choice for first-time guests.",
 
-    couplesMassageTitle: "Couples Full Body Massage",
-    couplesMassageDesc: "Share the relaxation experience with your loved one",
+    couplesMassageTitle: "Couples Massage - Share the Aloha",
+    couplesMassageDesc: "Side-by-side relaxation for you and your special someone. Perfect for anniversaries, honeymoons, or just because. Book together, relax together, reconnect together.",
 
-    minutes: "minutes",
-    mostPopular: "Most Popular",
-    walkInsWelcome: "Walk-ins welcome! Call us to check availability",
+    minutes: "min",
+    mostPopular: "Guest Favorite ⭐",
+    walkInsWelcome: "Walk-ins welcome! Call ahead to request your favorite therapist",
     hot: "Hot",
     viewMore: "View More",
 
@@ -94,44 +94,44 @@ export const translations = {
     views: "views",
 
     // Testimonials
-    testimonialsTitle: "Testimonials",
-    testimonial1Name: "Sarah Johnson",
-    testimonial1Role: "Regular Client",
-    testimonial1Text: "Best massage I've ever had! The therapists are incredibly skilled and the atmosphere is so relaxing. I come here every month and always leave feeling refreshed and rejuvenated.",
-    testimonial2Name: "Michael Chen",
-    testimonial2Role: "Couples Massage Client",
-    testimonial2Text: "My wife and I had the couples massage for our anniversary. It was absolutely perfect! Professional service, clean facilities, and the Hawaiian techniques are amazing. Highly recommend!",
-    testimonial3Name: "Emily Rodriguez",
-    testimonial3Role: "First-Time Visitor",
-    testimonial3Text: "I was a walk-in and they accommodated me right away. The foot massage was heavenly and the prices are very reasonable. Definitely my new go-to spot for relaxation!",
+    testimonialsTitle: "What Our Guests Say",
+    testimonial1Name: "Sarah J.",
+    testimonial1Role: "Local Regular • Yelp Review",
+    testimonial1Text: "Best massage I've ever had! The therapists are incredibly skilled and the atmosphere is so relaxing. I come here every month and always leave feeling refreshed and rejuvenated. Angela was very welcoming and nice—she provides amazing customer care.",
+    testimonial2Name: "Michael C.",
+    testimonial2Role: "Anniversary Couple • Groupon Review",
+    testimonial2Text: "My wife and I had the couples massage for our anniversary. It was absolutely perfect! Professional service, clean facilities, and the Hawaiian techniques are amazing. By the end of our session, we felt completely reset. Highly recommend!",
+    testimonial3Name: "Emily R.",
+    testimonial3Role: "Tourist from California",
+    testimonial3Text: "I was a walk-in and they accommodated me right away. The foot massage was heavenly and the prices are very reasonable. I got the 90-minute body massage with essential oil—I love the smell and everything they provide is organic. Definitely my new go-to when I visit Hawaii!",
 
     // Newsletter
-    newsletterTitle: "DISCOUNT - RECEIVE PROMOTIONAL NEWS",
-    newsletterSubtitle: "Subscribe to email to receive attractive offers and the latest news from Royal Spa",
-    emailPlaceholder: "Enter your email",
-    subscribe: "Subscribe Now",
-    privacyNote: "* We are committed to protecting your information",
+    newsletterTitle: "Join the 'Ohana (Family)",
+    newsletterSubtitle: "Get $10 off your first visit + exclusive wellness tips and special offers for locals and returning guests",
+    emailPlaceholder: "Your email address",
+    subscribe: "Get My $10 Off",
+    privacyNote: "We respect your inbox. Unsubscribe anytime. Your info stays safe with us.",
 
     // Footer
-    footerAbout: "Professional massage therapy center providing authentic Hawaiian relaxation and healing services.",
+    footerAbout: "Since 2019, Aloha Massage Spa has been Honolulu's sanctuary for authentic Hawaiian healing. Licensed therapists. Organic products. Genuine aloha spirit.",
     quickLinks: "Quick Links",
     servicesLink: "Services",
-    footerServices: "Services",
+    footerServices: "Our Treatments",
     acneTreatment: "Foot Massage",
     malasmaTreatment: "Full Body Massage",
-    hairRemoval: "Custom Massage",
+    hairRemoval: "Targeted Relief",
     skinRejuvenation: "Combination Massage",
-    fatReduction: "Couple Massage",
-    contactInfo: "Contact",
-    address: "1960 Kapiolani Blvd #202, Honolulu, HI 96826",
-    hours: "9:00 AM - 9:00 PM (Daily)",
-    allRightsReserved: "All rights reserved",
+    fatReduction: "Couples Massage",
+    contactInfo: "Visit Us",
+    address: "1960 Kapiolani Blvd, Suite 202, Honolulu, HI 96826 (2nd floor of McCully Shopping Center - elevator available)",
+    hours: "Open Daily: 10:00 AM - 11:00 PM • Walk-ins Welcome",
+    allRightsReserved: "© 2019-2025 Aloha Massage Spa. All rights reserved. Licensed Therapist Angela Yang #MAT-14098",
   },
 
   vi: {
     // Header
-    headerTop: "CHÀO MỜI VÀO SẾP HOÀNG HỒNG SPA",
-    phone: "+1 (808) 942-5000",
+    headerTop: "Mở Cửa Hàng Ngày 10 Sáng - 11 Tối • Chào Đón Khách Vãng Lai",
+    phone: "(808) 942-5000",
     email: "info@alohamassagespahi.com",
     home: "Trang Chủ",
     about: "Giới Thiệu",
@@ -141,13 +141,13 @@ export const translations = {
     bookNow: "Đặt Lịch Ngay",
 
     // Hero
-    heroTitle: "Chăm sóc sắc đẹp chuyên nghiệp",
-    heroSubtitle: "hàng đầu Việt Nam",
-    heroDescription: "Trải nghiệm dịch vụ chăm sóc sắc đẹp đẳng cấp với công nghệ hiện đại và đội ngũ chuyên viên giàu kinh nghiệm",
-    viewServices: "Xem Dịch Vụ",
-    yearsExp: "Năm Kinh Nghiệm",
-    clients: "Khách Hàng",
-    satisfaction: "Hài Lòng",
+    heroTitle: "Cảm Nhận Tinh Thần Aloha Chân Thật",
+    heroSubtitle: "Nơi Liệu Pháp Cổ Truyền Hawaii Gặp Gỡ Sức Khỏe Hiện Đại",
+    heroDescription: "Bước vào thánh đường yên bình của chúng tôi tại trung tâm Honolulu. Từ năm 2019, chúng tôi đã chào đón hơn 50,000 khách với sự ấm áp của lòng hiếu khách Hawaii và bàn tay chữa lành của các nhà trị liệu có giấy phép. Hãy đến như bạn—luôn chào đón khách vãng lai.",
+    viewServices: "Xem Dịch Vụ Của Chúng Tôi",
+    yearsExp: "Từ Năm 2019",
+    clients: "Khách Hài Lòng",
+    satisfaction: "4.7★ Đánh Giá",
 
     // Benefits
     benefitsTitle: "Tại Sao Chọn Aloha Massage Spa",
@@ -233,14 +233,14 @@ export const translations = {
     testimonial3Text: "Giá cả hợp lý, chất lượng dịch vụ vượt mong đợi. Đội ngũ chuyên viên rất chuyên nghiệp và tận tâm. Sẽ quay lại!",
 
     // Newsletter
-    newsletterTitle: "GIẢM GIÁ - NHẬN KHUYẾN MÃI TIN LIÊN",
-    newsletterSubtitle: "Đăng ký email để nhận những ưu đãi hấp dẫn và tin tức mới nhất từ Hoàng Hồng Spa",
-    emailPlaceholder: "Nhập email của bạn",
-    subscribe: "Đăng Ký Ngay",
-    privacyNote: "* Chúng tôi cam kết bảo mật thông tin của bạn",
+    newsletterTitle: "Tham Gia 'Ohana (Gia Đình)",
+    newsletterSubtitle: "Nhận giảm giá $10 cho lần đầu + mẹo sức khỏe và ưu đãi đặc biệt cho người địa phương và khách quay lại",
+    emailPlaceholder: "Địa chỉ email của bạn",
+    subscribe: "Nhận Giảm Giá $10",
+    privacyNote: "Chúng tôi tôn trọng hộp thư của bạn. Hủy đăng ký bất cứ lúc nào. Thông tin của bạn an toàn với chúng tôi.",
 
     // Footer
-    footerAbout: "Trung tâm chăm sóc sắc đẹp hàng đầu với công nghệ hiện đại và dịch vụ chuyên nghiệp.",
+    footerAbout: "Từ năm 2019, Aloha Massage Spa là nơi thánh đường chữa lành Hawaii chính hiệu của Honolulu. Nhà trị liệu có giấy phép. Sản phẩm hữu cơ. Tinh thần aloha chân thực.",
     quickLinks: "Liên Kết",
     servicesLink: "Dịch Vụ",
     footerServices: "Dịch Vụ",
@@ -250,15 +250,15 @@ export const translations = {
     skinRejuvenation: "Trẻ hóa da mặt",
     fatReduction: "Giảm mỡ, tan mỡ",
     contactInfo: "Liên Hệ",
-    address: "1960 Kapiolani Blvd #202, Honolulu, HI 96826",
-    hours: "8:00 - 22:00 (Hàng ngày)",
-    allRightsReserved: "Bản quyền thuộc về",
+    address: "1960 Kapiolani Blvd, Suite 202, Honolulu, HI 96826 (Tầng 2 của McCully Shopping Center - có thang máy)",
+    hours: "Mở Cửa Hàng Ngày: 10:00 Sáng - 11:00 Tối • Chào Đón Khách Vãng Lai",
+    allRightsReserved: "© 2019-2025 Aloha Massage Spa. Bản quyền thuộc về. Nhà Trị Liệu Có Giấy Phép Angela Yang #MAT-14098",
   },
 
   zh: {
     // Header
-    headerTop: "欢迎光临皇家水疗中心",
-    phone: "+1 (808) 942-5000",
+    headerTop: "每日营业 上午10点 - 晚上11点 • 欢迎随时光临",
+    phone: "(808) 942-5000",
     email: "info@alohamassagespahi.com",
     home: "首页",
     about: "关于我们",
@@ -268,13 +268,13 @@ export const translations = {
     bookNow: "立即预约",
 
     // Hero
-    heroTitle: "专业美容护理",
-    heroSubtitle: "越南领先品牌",
-    heroDescription: "体验一流的美容护理服务，配备现代技术和经验丰富的专业团队",
-    viewServices: "查看服务",
-    yearsExp: "年经验",
-    clients: "客户",
-    satisfaction: "满意度",
+    heroTitle: "感受真正的阿罗哈精神",
+    heroSubtitle: "古老夏威夷疗法与现代健康的结合",
+    heroDescription: "走进我们位于檀香山中心的宁静圣地。自2019年以来，我们以夏威夷式的热情好客和持证治疗师的治愈之手迎接了超过50,000位客人。随时欢迎光临——无需预约。",
+    viewServices: "查看我们的服务",
+    yearsExp: "自2019年",
+    clients: "满意客人",
+    satisfaction: "4.7★ 评价",
 
     // Benefits
     benefitsTitle: "为什么选择阿罗哈按摩水疗中心",
@@ -360,14 +360,14 @@ export const translations = {
     testimonial3Text: "价格合理，服务质量超出预期。专业团队非常专业和尽心。会再来！",
 
     // Newsletter
-    newsletterTitle: "折扣 - 接收促销新闻",
-    newsletterSubtitle: "订阅电子邮件以接收皇家水疗的优惠和最新消息",
-    emailPlaceholder: "输入您的电子邮件",
-    subscribe: "立即订阅",
-    privacyNote: "* 我们承诺保护您的信息",
+    newsletterTitle: "加入'Ohana（家庭）",
+    newsletterSubtitle: "首次光临享$10优惠 + 专属健康小贴士和本地客人及回头客特别优惠",
+    emailPlaceholder: "您的电子邮件地址",
+    subscribe: "获取$10优惠",
+    privacyNote: "我们尊重您的收件箱。随时取消订阅。您的信息在我们这里很安全。",
 
     // Footer
-    footerAbout: "领先的美容护理中心，拥有现代技术和专业服务。",
+    footerAbout: "自2019年以来，Aloha Massage Spa一直是檀香山正宗夏威夷疗愈的圣地。持证治疗师。有机产品。真正的阿罗哈精神。",
     quickLinks: "快速链接",
     servicesLink: "服务",
     footerServices: "服务",
@@ -377,15 +377,15 @@ export const translations = {
     skinRejuvenation: "面部年轻化",
     fatReduction: "减脂、溶脂",
     contactInfo: "联系",
-    address: "1960 Kapiolani Blvd #202, Honolulu, HI 96826",
-    hours: "8:00 - 22:00 (每天)",
-    allRightsReserved: "版权所有",
+    address: "1960 Kapiolani Blvd, Suite 202, Honolulu, HI 96826（McCully购物中心2楼 - 有电梯）",
+    hours: "每日营业：上午10:00 - 晚上11:00 • 欢迎随时光临",
+    allRightsReserved: "© 2019-2025 Aloha Massage Spa. 版权所有。持证治疗师 Angela Yang #MAT-14098",
   },
 
   ja: {
     // Header
-    headerTop: "ロイヤルスパへようこそ",
-    phone: "+1 (808) 942-5000",
+    headerTop: "毎日営業 午前10時 - 午後11時 • 予約なしでもご利用可能",
+    phone: "(808) 942-5000",
     email: "info@alohamassagespahi.com",
     home: "ホーム",
     about: "私たちについて",
@@ -395,13 +395,13 @@ export const translations = {
     bookNow: "今すぐ予約",
 
     // Hero
-    heroTitle: "プロフェッショナルビューティーケア",
-    heroSubtitle: "ベトナムトップブランド",
-    heroDescription: "最新技術と豊富な経験を持つ専門チームによる、世界クラスのビューティーケアサービスをご体験ください",
+    heroTitle: "本物のアロハスピリットを感じる",
+    heroSubtitle: "古代ハワイアンヒーリングと現代ウェルネスの融合",
+    heroDescription: "ホノルルの中心にある私たちの静かな聖域へようこそ。2019年以来、ハワイアンホスピタリティの温かさと有資格セラピストの癒しの手で50,000人以上のお客様をお迎えしています。予約なしでもお気軽にお越しください。",
     viewServices: "サービスを見る",
-    yearsExp: "年の経験",
-    clients: "お客様",
-    satisfaction: "満足度",
+    yearsExp: "2019年から",
+    clients: "満足のお客様",
+    satisfaction: "4.7★ レビュー",
 
     // Benefits
     benefitsTitle: "アロハマッサージスパを選ぶ理由",
@@ -487,14 +487,14 @@ export const translations = {
     testimonial3Text: "リーズナブルな価格、期待を超えるサービス品質。専門チームは非常にプロフェッショナルで献身的です。また来ます！",
 
     // Newsletter
-    newsletterTitle: "割引 - プロモーションニュースを受け取る",
-    newsletterSubtitle: "ロイヤルスパからの魅力的なオファーと最新ニュースを受け取るためにメールを登録してください",
-    emailPlaceholder: "メールアドレスを入力",
-    subscribe: "今すぐ登録",
-    privacyNote: "* お客様の情報を保護することをお約束します",
+    newsletterTitle: "'Ohana（家族）に参加",
+    newsletterSubtitle: "初回$10割引 + 地元のお客様やリピーターのための専属ウェルネスのヒントと特別オファー",
+    emailPlaceholder: "メールアドレス",
+    subscribe: "$10割引を取得",
+    privacyNote: "お客様の受信トレイを尊重します。いつでも配信停止可能。お客様の情報は私たちと安全です。",
 
     // Footer
-    footerAbout: "最新技術と専門サービスを備えた主要なビューティーケアセンター。",
+    footerAbout: "2019年以来、Aloha Massage Spaはホノルルの本格的なハワイアンヒーリングの聖地です。有資格セラピスト。オーガニック製品。本物のアロハスピリット。",
     quickLinks: "クイックリンク",
     servicesLink: "サービス",
     footerServices: "サービス",
@@ -504,8 +504,8 @@ export const translations = {
     skinRejuvenation: "フェイシャル若返り",
     fatReduction: "脂肪減少、脂肪溶解",
     contactInfo: "お問い合わせ",
-    address: "1960 Kapiolani Blvd #202, Honolulu, HI 96826",
-    hours: "8:00 - 22:00 (毎日)",
-    allRightsReserved: "All rights reserved",
+    address: "1960 Kapiolani Blvd, Suite 202, Honolulu, HI 96826（McCully Shopping Center 2階 - エレベーター利用可）",
+    hours: "毎日営業：午前10:00 - 午後11:00 • 予約なしでもご利用可能",
+    allRightsReserved: "© 2019-2025 Aloha Massage Spa. All rights reserved. 有資格セラピスト Angela Yang #MAT-14098",
   }
 };

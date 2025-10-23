@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingBookButton from "@/components/FloatingBookButton";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -76,7 +77,14 @@ export default function AboutPage() {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="text-5xl mb-4">🌺</div>
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=200&h=200&fit=crop"
+                    alt="Aloha Spirit"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Aloha Spirit</h3>
                 <p className="text-gray-700">
                   We embody the Hawaiian spirit of love, compassion, and respect in
@@ -84,7 +92,14 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="text-5xl mb-4">💆</div>
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=200&h=200&fit=crop"
+                    alt="Excellence"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Excellence</h3>
                 <p className="text-gray-700">
                   Our licensed therapists are highly trained professionals with 10+ years
@@ -92,7 +107,14 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <div className="text-5xl mb-4">✨</div>
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=200&h=200&fit=crop"
+                    alt="Healing"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-primary mb-4">Healing</h3>
                 <p className="text-gray-700">
                   We believe in the therapeutic power of massage to promote physical healing,
@@ -163,7 +185,7 @@ export default function AboutPage() {
                     Flexible Hours & Walk-Ins
                   </h3>
                   <p className="text-gray-700">
-                    Open 7 days a week from 9 AM to 9 PM. We welcome walk-ins and offer
+                    Open 7 days a week from 10 AM to 11 PM. We welcome walk-ins and offer
                     flexible scheduling to fit your busy lifestyle.
                   </p>
                 </div>
@@ -216,22 +238,37 @@ export default function AboutPage() {
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-5xl mb-4">
-                    💆
+                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 shadow-lg">
+                    <Image
+                      src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=300&h=300&fit=crop"
+                      alt="Experience"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-2">10+ Years</h3>
                   <p className="text-gray-600">Average Experience</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-5xl mb-4">
-                    📜
+                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 shadow-lg">
+                    <Image
+                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&h=300&fit=crop"
+                      alt="Certified"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-2">100%</h3>
                   <p className="text-gray-600">Licensed & Certified</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-5xl mb-4">
-                    🌟
+                  <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 shadow-lg">
+                    <Image
+                      src="https://images.unsplash.com/photo-1529973625058-8869efd7760a?w=300&h=300&fit=crop"
+                      alt="Reviews"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-2">5-Star</h3>
                   <p className="text-gray-600">Client Reviews</p>
@@ -261,6 +298,7 @@ export default function AboutPage() {
       </section>
 
       <Footer />
+      <FloatingBookButton />
     </main>
   );
 }

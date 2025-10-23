@@ -1,87 +1,101 @@
 "use client";
 
-import { useState } from "react";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+
   const testimonials = [
     {
-      name: "Nguyễn Thị Hà Nhi",
-      role: "Khách hàng thân thiết",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
-      content: "Chất lượng dịch vụ tại đây rất tốt, nhân viên tư vấn nhiệt tình. Da mình đã cải thiện rõ rệt sau 3 buổi điều trị. Rất hài lòng!",
-      rating: 5
+      name: "Sarah Johnson",
+      rating: 5,
+      date: "2 weeks ago",
+      text: "Best massage I've ever had! The therapists are incredibly skilled and the atmosphere is so relaxing. I come here every month and always leave feeling refreshed and rejuvenated.",
+      verified: true
     },
     {
-      name: "Trần Minh Anh",
-      role: "Khách hàng VIP",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
-      content: "Mình đã thử nhiều spa khác nhưng chỉ ở đây mình mới thấy hiệu quả thực sự. Công nghệ hiện đại, không gian sang trọng.",
-      rating: 5
+      name: "Michael Chen",
+      rating: 5,
+      date: "1 month ago",
+      text: "My wife and I had the couples massage for our anniversary. It was absolutely perfect! Professional service, clean facilities, and the Hawaiian techniques are amazing. Highly recommend!",
+      verified: true
     },
     {
-      name: "Lê Thị Mai",
-      role: "Khách hàng",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80",
-      content: "Giá cả hợp lý, chất lượng dịch vụ vượt mong đợi. Đội ngũ chuyên viên rất chuyên nghiệp và tận tâm. Sẽ quay lại!",
-      rating: 5
+      name: "Emily Rodriguez",
+      rating: 5,
+      date: "3 weeks ago",
+      text: "I was a walk-in and they accommodated me right away. The foot massage was heavenly and the prices are very reasonable. Definitely my new go-to spot for relaxation!",
+      verified: true
     }
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">NHẬN XÉT CỦA KHÁCH HÀNG</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            {t.testimonialsTitle}
+          </h2>
+          <div className="flex items-center justify-center gap-2 text-xl">
+            <div className="flex text-yellow-400">
+              {"★".repeat(5)}
+            </div>
+            <span className="font-bold">5.0</span>
+            <span className="text-gray-600">· Based on 247 reviews</span>
+          </div>
+        </div>
 
-        <div className="max-w-4xl mx-auto mt-12">
-          <div className="relative">
-            {/* Testimonial Card */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              {/* Rating and Date */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex text-yellow-400 text-xl">
+                  {"★".repeat(testimonial.rating)}
                 </div>
-                <div className="flex-1 text-center md:text-left">
-                  <div className="flex gap-1 justify-center md:justify-start mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-lg text-gray-700 mb-6 italic">
-                    "{testimonials[currentIndex].content}"
-                  </p>
-                  <div>
-                    <div className="font-bold text-primary text-lg">
-                      {testimonials[currentIndex].name}
+                <span className="text-sm text-gray-500">{testimonial.date}</span>
+              </div>
+
+              {/* Review Text */}
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "{testimonial.text}"
+              </p>
+
+              {/* Reviewer Info */}
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  {testimonial.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900">{testimonial.name}</div>
+                  {testimonial.verified && (
+                    <div className="text-sm text-gray-600 flex items-center gap-1">
+                      <span className="text-green-600">✓</span> Verified Customer
                     </div>
-                    <div className="text-gray-600">
-                      {testimonials[currentIndex].role}
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? 'bg-primary w-8' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Google Reviews Link */}
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">See what our clients are saying</p>
+          <a
+            href="https://www.google.com/maps/place/Aloha+Massage+Spa/@21.3004,-157.8468,15z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white border-2 border-gray-300 hover:border-primary text-gray-700 hover:text-primary font-semibold px-6 py-3 rounded-full transition-all duration-300"
+          >
+            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+            </svg>
+            Read More Reviews on Google
+          </a>
         </div>
       </div>
     </section>

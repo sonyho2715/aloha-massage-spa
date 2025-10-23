@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingBookButton from "@/components/FloatingBookButton";
 import Image from "next/image";
 import { useLanguage } from "@/lib/LanguageContext";
 
@@ -330,12 +331,13 @@ export default function ServicesPage() {
             📞 (808) 912-1000
           </a>
           <p className="mt-6 text-lg opacity-90">
-            Open Daily: 9:00 AM - 9:00 PM
+            Open Daily: 10:00 AM - 11:00 PM
           </p>
         </div>
       </section>
 
       <Footer />
+      <FloatingBookButton />
     </main>
   );
 }

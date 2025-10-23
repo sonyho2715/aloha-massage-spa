@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-          <p>&copy; 2025 Royal Spa. {t.allRightsReserved}.</p>
+          <p>&copy; 2025 Aloha Massage Spa. {t.allRightsReserved}.</p>
         </div>
       </div>
     </footer>

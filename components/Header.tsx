@@ -39,6 +39,9 @@ export default function Header() {
             <Link href="/services" className="text-gray-700 hover:text-primary transition-colors">
               {t.services}
             </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-primary transition-colors">
+              Blog
+            </Link>
             <Link href="/gallery" className="text-gray-700 hover:text-primary transition-colors">
               {t.gallery}
             </Link>
@@ -83,6 +86,9 @@ export default function Header() {
             </Link>
             <Link href="/services" className="block text-gray-700 hover:text-primary transition-colors">
               {t.services}
+            </Link>
+            <Link href="/blog" className="block text-gray-700 hover:text-primary transition-colors">
+              Blog
             </Link>
             <Link href="/gallery" className="block text-gray-700 hover:text-primary transition-colors">
               {t.gallery}
