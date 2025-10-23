@@ -174,7 +174,7 @@ export const translations = {
     customMassageDesc: "Thời gian gấp à? Không sao! Tập trung vào chỗ đau nhất thôi. Cổ vai gáy, lưng dưới, hay mấy cục búi cứng đầu—giải quyết nhanh gọn cho bạn.",
 
     comboMassageTitle: "Massage Combo - Ngon Cả Đôi Đường",
-    comboMassageDesc: "Sao phải chọn? Lấy luôn cả bấm huyệt chân lẫn massage thân trên. Chân và vai bạn sẽ "cảm ơn" bạn đấy! Khách lần đầu thích nhất.",
+    comboMassageDesc: "Sao phải chọn? Lấy luôn cả bấm huyệt chân lẫn massage thân trên. Chân và vai bạn sẽ 'cảm ơn' bạn đấy! Khách lần đầu thích nhất.",
 
     couplesMassageTitle: "Massage Couple - Chill Cùng Người Yêu",
     couplesMassageDesc: "Hai bạn nằm cạnh nhau cùng relax. Hợp cho kỷ niệm, tuần trăng mật, hoặc đơn giản là muốn pamper nhau. Book chung, chill chung, gắn kết hơn!",
@@ -301,7 +301,7 @@ export const translations = {
     customMassageDesc: "时间紧？没关系！专攻最疼的地方。脖子肩膀、腰背，或者硬邦邦的筋结——快速搞定。",
 
     comboMassageTitle: "组合按摩 - 双重享受",
-    comboMassageDesc: "为啥要选？足底反射+上身按摩一起来！你的脚和肩膀会"谢谢"你的。新客最爱这个。",
+    comboMassageDesc: "为啥要选？足底反射+上身按摩一起来！你的脚和肩膀会'谢谢'你的。新客最爱这个。",
 
     couplesMassageTitle: "情侣按摩 - 一起放松",
     couplesMassageDesc: "和另一半并排躺着一起按。适合纪念日、蜜月，或者单纯想宠宠彼此。一起订，一起爽，感情更好！",
@@ -428,7 +428,7 @@ export const translations = {
     customMassageDesc: "時間ない？大丈夫！一番痛いとこ集中的に。首肩、腰、ガチガチのコリ—速攻で楽にします。",
 
     comboMassageTitle: "コンボマッサージ - いいとこ取り",
-    comboMassageDesc: "選ばなくていいんです！足つぼ＋上半身マッサージ両方やっちゃう。足も肩も「ありがとう」って喜びます。初めての方に人気。",
+    comboMassageDesc: "選ばなくていいんです！足つぼ＋上半身マッサージ両方やっちゃう。足も肩も'ありがとう'って喜びます。初めての方に人気。",
 
     couplesMassageTitle: "カップルマッサージ - 2人で癒し",
     couplesMassageDesc: "パートナーと並んで一緒にリラックス。記念日、ハネムーン、または理由なくても。一緒に予約、一緒に癒される、もっと仲良く！",
