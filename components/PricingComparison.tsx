@@ -25,7 +25,7 @@ export default function PricingComparison() {
       price30: "$70",
       duration60: "90 min",
       price60: "$110",
-      therapist: "Angela, Tony, Andy",
+      therapist: language === 'en' ? "Any" : language === 'vi' ? "Bất kỳ" : language === 'zh' ? "任何" : "誰でも",
       popular: true
     },
     {
@@ -45,7 +45,7 @@ export default function PricingComparison() {
       price30: "$80",
       duration60: "90 min",
       price60: "$120",
-      therapist: "Andy",
+      therapist: language === 'en' ? "Any" : language === 'vi' ? "Bất kỳ" : language === 'zh' ? "任何" : "誰でも",
       popular: false
     },
     {
@@ -67,7 +67,7 @@ export default function PricingComparison() {
       price30: "$140",
       duration60: "90 min",
       price60: "$220",
-      therapist: language === 'en' ? "Side-by-side" : language === 'vi' ? "Cạnh nhau" : language === 'zh' ? "并排" : "並んで",
+      therapist: language === 'en' ? "Any" : language === 'vi' ? "Bất kỳ" : language === 'zh' ? "任何" : "誰でも",
       popular: true
     }
   ];

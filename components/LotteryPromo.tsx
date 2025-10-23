@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export default function LotteryPromo() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -63,32 +62,12 @@ export default function LotteryPromo() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-300 rounded-full opacity-20 blur-3xl" />
 
       <div className="container mx-auto px-4 relative">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Image/Visual */}
-            <div className="relative">
-              <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&h=800&fit=crop"
-                  alt="Hand Picking Lottery Ticket"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <p className="text-2xl font-bold">Every Visit is a Chance to Win!</p>
-                </div>
-              </div>
-
-              {/* Floating lottery ticket */}
-              <div className="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300">
-                <div className="text-6xl mb-2">🎟️</div>
-                <p className="font-bold text-primary text-lg">Free Entry!</p>
-              </div>
-            </div>
-
-            {/* Right - Content */}
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            {/* Content */}
             <div>
+              <div className="text-8xl mb-6">🎟️</div>
+
               <div className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
                 LIMITED TIME OFFER
               </div>
@@ -97,13 +76,13 @@ export default function LotteryPromo() {
                 Win a Lottery Ticket!
               </h2>
 
-              <p className="text-2xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-2xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
                 Check in at our spa and get a <span className="font-bold text-orange-600">FREE entry</span> to win a Hawaii State Lottery ticket!
               </p>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl mb-8">
-                <h3 className="text-xl font-bold text-primary mb-4">How to Enter:</h3>
-                <div className="space-y-4">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl mb-8 max-w-2xl mx-auto">
+                <h3 className="text-xl font-bold text-primary mb-4 text-center">How to Enter:</h3>
+                <div className="space-y-4 text-left">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
                       1
@@ -167,7 +146,7 @@ export default function LotteryPromo() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:8089425000"
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-white font-bold text-lg py-4 px-8 rounded-full hover:shadow-2xl transition-all transform hover:scale-105"
@@ -182,7 +161,7 @@ export default function LotteryPromo() {
                 </a>
               </div>
 
-              <p className="text-xs text-gray-500 mt-6">
+              <p className="text-xs text-gray-500 mt-6 text-center max-w-2xl mx-auto">
                 * One entry per customer per visit. No purchase necessary beyond standard massage service. Must be 18+ to enter. Lottery ticket value up to $20. See staff for complete terms and conditions.
               </p>
             </div>
