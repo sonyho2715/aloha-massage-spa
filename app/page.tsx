@@ -1,9 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import TrustBadges from "@/components/TrustBadges";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
+import PricingComparison from "@/components/PricingComparison";
 import TherapistProfiles from "@/components/TherapistProfiles";
 import LuxurySection from "@/components/LuxurySection";
+import CustomerReviews from "@/components/CustomerReviews";
 import MassageRecommender from "@/components/MassageRecommender";
 import Testimonials from "@/components/Testimonials";
 import LotteryPromo from "@/components/LotteryPromo";
@@ -17,10 +20,13 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <TrustBadges />
       <Benefits />
       <Services />
+      <PricingComparison />
       <TherapistProfiles />
       <LuxurySection />
+      <CustomerReviews />
       <MassageRecommender />
       <Testimonials />
       <LotteryPromo />

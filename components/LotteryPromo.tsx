@@ -1,9 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function LotteryPromo() {
-  // Calculate next drawing date (beginning of November 2025)
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  // Calculate next drawing date (beginning of November)
   const getNextDrawingDate = () => {
     const now = new Date();
     const currentYear = now.getFullYear();
@@ -14,11 +17,44 @@ export default function LotteryPromo() {
     const drawingYear = currentMonth < 10 ? currentYear : currentYear + 1;
     const drawingDate = new Date(drawingYear, 10, 1); // November 1st
 
-    return drawingDate.toLocaleDateString('en-US', {
-      month: 'long',
-      year: 'numeric'
-    });
+    return {
+      formatted: drawingDate.toLocaleDateString('en-US', {
+        month: 'long',
+        year: 'numeric'
+      }),
+      date: drawingDate
+    };
   };
+
+  // Countdown timer effect
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const nextDrawing = getNextDrawingDate().date;
+      const now = new Date();
+      const difference = nextDrawing.getTime() - now.getTime();
+
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        };
+      }
+
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    };
+
+    // Initial calculation
+    setTimeLeft(calculateTimeLeft());
+
+    // Update every second
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 relative overflow-hidden">
@@ -100,13 +136,34 @@ export default function LotteryPromo() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border-2 border-yellow-400 rounded-xl p-4 mb-8 animate-pulse">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">🎉</span>
-                  <div>
-                    <p className="font-bold text-gray-900">Winner Drawn Monthly!</p>
-                    <p className="text-sm text-gray-600">Next drawing: {getNextDrawingDate()}</p>
+              <div className="bg-gradient-to-r from-yellow-100 to-orange-100 border-2 border-yellow-400 rounded-xl p-6 mb-8">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <span className="text-3xl">🎉</span>
+                    <p className="font-bold text-gray-900 text-lg">Winner Drawn Monthly!</p>
                   </div>
+
+                  {/* Countdown Timer */}
+                  <div className="grid grid-cols-4 gap-3 mb-3">
+                    <div className="bg-white rounded-lg p-3 shadow-md">
+                      <div className="text-3xl font-bold text-primary">{timeLeft.days}</div>
+                      <div className="text-xs text-gray-600 uppercase">Days</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3 shadow-md">
+                      <div className="text-3xl font-bold text-primary">{timeLeft.hours}</div>
+                      <div className="text-xs text-gray-600 uppercase">Hours</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3 shadow-md">
+                      <div className="text-3xl font-bold text-primary">{timeLeft.minutes}</div>
+                      <div className="text-xs text-gray-600 uppercase">Minutes</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3 shadow-md">
+                      <div className="text-3xl font-bold text-primary">{timeLeft.seconds}</div>
+                      <div className="text-xs text-gray-600 uppercase">Seconds</div>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-gray-600">Next drawing: {getNextDrawingDate().formatted}</p>
                 </div>
               </div>
 
