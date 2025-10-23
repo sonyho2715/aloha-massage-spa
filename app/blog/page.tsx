@@ -61,10 +61,118 @@ export default function BlogPage() {
       date: "December 15, 2024",
       readTime: "6 min read",
       category: "Sports & Fitness"
+    },
+    {
+      id: "couples-massage-guide",
+      title: "The Complete Guide to Couples Massage: Bonding Through Wellness",
+      excerpt: "Discover how couples massage can strengthen relationships, reduce stress together, and create lasting memories. Perfect for anniversaries, date nights, or quality time.",
+      image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop",
+      date: "December 10, 2024",
+      readTime: "5 min read",
+      category: "Relationships"
+    },
+    {
+      id: "massage-pregnancy",
+      title: "Prenatal Massage: Safe Relief for Expecting Mothers",
+      excerpt: "Learn about the benefits and safety considerations of massage therapy during pregnancy, including techniques that provide relief for common discomforts.",
+      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&h=600&fit=crop",
+      date: "December 5, 2024",
+      readTime: "7 min read",
+      category: "Women's Health"
+    },
+    {
+      id: "essential-oils-massage",
+      title: "Essential Oils in Massage: Benefits of Aromatherapy",
+      excerpt: "Explore how organic essential oils enhance your massage experience, from lavender for relaxation to eucalyptus for respiratory relief.",
+      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=600&fit=crop",
+      date: "November 28, 2024",
+      readTime: "5 min read",
+      category: "Health & Wellness"
+    },
+    {
+      id: "chronic-pain-relief",
+      title: "Managing Chronic Pain with Regular Massage Therapy",
+      excerpt: "How consistent massage therapy can help manage conditions like fibromyalgia, arthritis, and chronic back pain without medication.",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop",
+      date: "November 20, 2024",
+      readTime: "6 min read",
+      category: "Pain Management"
+    },
+    {
+      id: "first-time-massage",
+      title: "First Time Getting a Massage? Here's What to Expect",
+      excerpt: "A complete guide for massage newcomers covering what to wear, how to prepare, what to expect during your session, and post-massage care.",
+      image: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&h=600&fit=crop",
+      date: "November 15, 2024",
+      readTime: "4 min read",
+      category: "Beginner's Guide"
+    },
+    {
+      id: "massage-immunity",
+      title: "Boost Your Immune System with Regular Massage",
+      excerpt: "Scientific evidence shows how massage therapy can strengthen your immune system, reduce illness frequency, and improve overall health.",
+      image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=600&fit=crop",
+      date: "November 10, 2024",
+      readTime: "5 min read",
+      category: "Health & Wellness"
+    },
+    {
+      id: "post-workout-massage",
+      title: "Post-Workout Massage: Accelerate Muscle Recovery",
+      excerpt: "Learn optimal timing and techniques for post-exercise massage to reduce soreness, prevent injury, and enhance athletic performance.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      date: "November 5, 2024",
+      readTime: "4 min read",
+      category: "Sports & Fitness"
+    },
+    {
+      id: "office-workers-massage",
+      title: "Desk Job Relief: Massage Solutions for Office Workers",
+      excerpt: "Combat tech neck, shoulder tension, and lower back pain from sitting all day with targeted massage therapy and self-care tips.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      date: "October 30, 2024",
+      readTime: "5 min read",
+      category: "Workplace Wellness"
+    },
+    {
+      id: "sleep-better-massage",
+      title: "How Massage Therapy Can Improve Your Sleep Quality",
+      excerpt: "Discover the connection between massage, stress reduction, and better sleep. Learn which massage techniques promote deeper, more restful sleep.",
+      image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=600&fit=crop",
+      date: "October 25, 2024",
+      readTime: "5 min read",
+      category: "Mental Health"
+    },
+    {
+      id: "hot-stone-benefits",
+      title: "Hot Stone Massage: Ancient Therapy Meets Modern Wellness",
+      excerpt: "Explore the healing benefits of hot stone massage, from deep muscle relaxation to improved circulation and stress relief.",
+      image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&h=600&fit=crop",
+      date: "October 20, 2024",
+      readTime: "6 min read",
+      category: "Massage Techniques"
+    },
+    {
+      id: "massage-elderly",
+      title: "Gentle Massage Therapy for Seniors and Elderly Care",
+      excerpt: "How adapted massage techniques can improve quality of life for seniors, addressing arthritis, circulation, and mobility issues safely.",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
+      date: "October 15, 2024",
+      readTime: "5 min read",
+      category: "Senior Health"
+    },
+    {
+      id: "massage-frequency",
+      title: "How Often Should You Get a Massage? Finding Your Perfect Schedule",
+      excerpt: "Determine the ideal massage frequency based on your lifestyle, health goals, and budget. From weekly sessions to monthly maintenance.",
+      image: "https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=800&h=600&fit=crop",
+      date: "October 10, 2024",
+      readTime: "4 min read",
+      category: "Health & Wellness"
     }
   ];
 
-  const categories = ["All", "Health & Wellness", "Massage Techniques", "Mental Health", "Sports & Fitness"];
+  const categories = ["All", "Health & Wellness", "Massage Techniques", "Mental Health", "Sports & Fitness", "Pain Management", "Relationships", "Women's Health", "Senior Health"];
 
   return (
     <main className="min-h-screen">

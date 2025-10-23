@@ -10,14 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#8B9D83", // Sage green
-          light: "#A4B59A",
-          dark: "#6B7A63",
+          DEFAULT: "#1e3a8a", // Deep blue
+          light: "#3b82f6",
+          dark: "#1e40af",
         },
         accent: {
-          DEFAULT: "#E8A598", // Soft coral
-          light: "#F2BCB1",
-          dark: "#DE8E7F",
+          DEFAULT: "#60a5fa", // Light blue
+          light: "#93c5fd",
+          dark: "#2563eb",
         },
         cream: "#FAF8F5",
         taupe: "#C9B8A3",

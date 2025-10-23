@@ -32,7 +32,7 @@ export default function TherapistProfiles() {
       description: language === 'en' ? "Tony is attentive and professional, taking time to understand your specific needs. Whether you're recovering from a workout or dealing with chronic tension, he tailors each session to bring you relief and relaxation." :
                    language === 'vi' ? "Tony chu đáo và chuyên nghiệp, dành thời gian để hiểu nhu cầu cụ thể của bạn. Cho dù bạn đang phục hồi sau tập luyện hay đối phó với căng thẳng mãn tính, anh ấy tùy chỉnh mỗi buổi để mang lại sự giảm nhẹ và thư giãn cho bạn." :
                    language === 'zh' ? "Tony细心且专业，花时间了解您的具体需求。无论您是在锻炼后恢复还是处理慢性紧张，他都会量身定制每次疗程，为您带来缓解和放松。" : "Tonyは細心で専門的で、お客様の具体的なニーズを理解するために時間をかけます。ワークアウト後の回復中であっても、慢性的な緊張に対処している場合でも、彼は各セッションをカスタマイズして、安心とリラクゼーションをもたらします。",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop"
+      image: ""
     },
     {
       name: "Andy",
@@ -46,7 +46,7 @@ export default function TherapistProfiles() {
       description: language === 'en' ? "Andy specializes in intensive deep tissue work for those who need serious pressure. His technique is strong and effective—perfect for stubborn knots and chronic pain. Note: His pressure can be intense, so please communicate your comfort level during your session." :
                    language === 'vi' ? "Andy chuyên về công việc mô sâu chuyên sâu cho những người cần áp lực nghiêm trọng. Kỹ thuật của anh ấy mạnh mẽ và hiệu quả—hoàn hảo cho các nút thắt cứng đầu và đau mãn tính. Lưu ý: Áp lực của anh ấy có thể mạnh, vì vậy hãy giao tiếp mức độ thoải mái của bạn trong buổi trị liệu." :
                    language === 'zh' ? "Andy专门从事强力深层组织工作，适合需要严重压力的人。他的技术强大而有效——非常适合顽固的结节和慢性疼痛。注意：他的压力可能很大，因此请在疗程期间告知您的舒适度。" : "Andyは、真剣な圧力が必要な人のために集中的なディープティッシュワークを専門としています。彼のテクニックは強力で効果的で、頑固な結び目や慢性的な痛みに最適です。注意：彼の圧力は激しい場合があるので、セッション中に快適なレベルを伝えてください。",
-      image: "https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400&h=400&fit=crop"
+      image: ""
     }
   ];
 
@@ -73,13 +73,21 @@ export default function TherapistProfiles() {
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="h-64 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                  <img
-                    src={therapist.image}
-                    alt={therapist.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                {therapist.image ? (
+                  <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img
+                      src={therapist.image}
+                      alt={therapist.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-48 h-48 rounded-full bg-white border-4 border-white shadow-xl flex items-center justify-center">
+                    <div className="text-6xl text-primary font-bold">
+                      {therapist.name.charAt(0)}
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="p-6">

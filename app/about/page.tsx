@@ -21,7 +21,7 @@ export default function AboutPage() {
               About Aloha Massage Spa
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Bringing the healing spirit of Hawaii to Honolulu since 2013
+              Bringing the healing spirit of Hawaii to Honolulu since 2019
             </p>
           </div>
         </div>
@@ -32,28 +32,34 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="relative h-96 md:h-full rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/IMG_6276.jpg"
-                  alt="Aloha Massage Spa"
-                  fill
-                  className="object-cover"
-                />
+              <div>
+                <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/IMG_6276.jpg"
+                    alt="Angela Yang - Owner & Master Therapist at Aloha Massage Spa"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-center text-sm text-gray-600 mt-3 italic">
+                  Angela Yang, Licensed Massage Therapist #MAT-14098
+                </p>
               </div>
               <div>
                 <h2 className="text-4xl font-bold text-primary mb-6">Our Story</h2>
                 <div className="space-y-4 text-lg text-gray-700">
                   <p>
-                    Founded in 2013, Aloha Massage Spa has been a sanctuary of relaxation
+                    Founded in 2019 by Angela Yang, Aloha Massage Spa has been a sanctuary of relaxation
                     and healing in the heart of Honolulu. Our mission is simple: to bring
                     the authentic Hawaiian healing traditions to every guest who walks through
-                    our doors.
+                    our doors, treating each person like 'ohana (family).
                   </p>
                   <p>
-                    With over a decade of experience, we've built a reputation for excellence
-                    in therapeutic massage. Our skilled therapists combine traditional Hawaiian
+                    Led by owner and master therapist Angela Yang (Licensed #MAT-14098),
+                    our team of skilled therapists—including Tony and Andy—combines traditional Hawaiian
                     lomilomi techniques with modern massage therapy to provide a truly unique
-                    and transformative experience.
+                    and transformative experience. Angela's warm welcome and genuine care set the tone
+                    for your entire visit.
                   </p>
                   <p>
                     At Aloha Massage Spa, we believe in the power of touch to heal the body,
@@ -289,10 +295,10 @@ export default function AboutPage() {
             Book your massage today and discover why we're Honolulu's favorite spa
           </p>
           <a
-            href="tel:8089121000"
+            href="tel:8089425000"
             className="inline-block bg-white text-primary hover:bg-gray-100 font-bold text-xl py-4 px-12 rounded-full transition-colors shadow-lg"
           >
-            📞 Call (808) 912-1000
+            📞 Call (808) 942-5000
           </a>
         </div>
       </section>

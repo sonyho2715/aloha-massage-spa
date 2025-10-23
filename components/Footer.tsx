@@ -44,6 +44,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-white/80 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/gallery" className="text-white/80 hover:text-white transition-colors">
                   {t.gallery}
                 </Link>
@@ -51,6 +56,16 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="text-white/80 hover:text-white transition-colors">
                   {t.contact}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-white/80 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className="text-white/80 hover:text-white transition-colors">
+                  Disclaimer
                 </Link>
               </li>
             </ul>
