@@ -35,12 +35,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <a
-              href="tel:8089425000"
+            <Link
+              href="/book"
               className="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-bold text-lg px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-2xl transform hover:scale-110 animate-pulse-glow"
             >
-              📞 {t.bookNow}
-            </a>
+              📅 {t.bookNow}
+            </Link>
             <Link
               href="/services"
               className="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary font-bold text-lg px-8 py-4 rounded-full transition-all shadow-lg transform hover:scale-105"
