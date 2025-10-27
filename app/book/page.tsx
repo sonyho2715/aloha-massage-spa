@@ -106,8 +106,8 @@ export default function BookingPage() {
     if (!selectedService) return [];
 
     const slots = [];
-    const businessStart = 9; // 9 AM
-    const businessEnd = 20; // 8 PM
+    const businessStart = 10; // 10 AM
+    const businessEnd = 23; // 11 PM
     const serviceDuration = selectedService.duration_minutes;
 
     // Determine slot interval based on service duration
@@ -367,7 +367,7 @@ export default function BookingPage() {
               </select>
               {selectedService && (
                 <p className="mt-2 text-sm text-gray-500">
-                  Service ends at closing time (8:00 PM). Showing available slots for {selectedService.duration_minutes}-minute service.
+                  Service ends at closing time (11:00 PM). Showing available slots for {selectedService.duration_minutes}-minute service.
                 </p>
               )}
             </div>
