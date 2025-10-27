@@ -54,10 +54,21 @@ export default function BookingPage() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    // If service is changed, reset the time selection since available slots change
+    if (name === 'serviceId') {
+      setFormData({
+        ...formData,
+        [name]: value,
+        time: '', // Clear time when service changes
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -89,6 +100,43 @@ export default function BookingPage() {
   };
 
   const selectedService = services.find(s => s.id === parseInt(formData.serviceId));
+
+  // Generate available time slots based on selected service
+  const generateTimeSlots = () => {
+    if (!selectedService) return [];
+
+    const slots = [];
+    const businessStart = 9; // 9 AM
+    const businessEnd = 20; // 8 PM
+    const serviceDuration = selectedService.duration_minutes;
+
+    // Determine slot interval based on service duration
+    const interval = serviceDuration <= 45 ? 15 : 30; // 15-min for short services, 30-min for longer
+
+    // Generate slots ensuring service can finish before closing
+    for (let hour = businessStart; hour < businessEnd; hour++) {
+      for (let minute = 0; minute < 60; minute += interval) {
+        const totalMinutes = hour * 60 + minute;
+        const endTime = totalMinutes + serviceDuration;
+        const endHour = Math.floor(endTime / 60);
+
+        // Only add slot if service finishes before closing time
+        if (endHour < businessEnd || (endHour === businessEnd && endTime % 60 === 0)) {
+          const timeValue = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+          const displayHour = hour > 12 ? hour - 12 : hour;
+          const ampm = hour >= 12 ? 'PM' : 'AM';
+          const displayMinute = minute.toString().padStart(2, '0');
+          const timeLabel = `${displayHour}:${displayMinute} ${ampm}`;
+
+          slots.push({ value: timeValue, label: timeLabel });
+        }
+      }
+    }
+
+    return slots;
+  };
+
+  const availableTimeSlots = generateTimeSlots();
 
   if (loading) {
     return (
@@ -297,7 +345,7 @@ export default function BookingPage() {
 
             <div>
               <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-2">
-                Preferred Time *
+                Preferred Time * {selectedService && `(${selectedService.duration_minutes} min service)`}
               </label>
               <select
                 id="time"
@@ -305,32 +353,23 @@ export default function BookingPage() {
                 value={formData.time}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                disabled={!selectedService}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
               >
-                <option value="">Select time...</option>
-                <option value="09:00">9:00 AM</option>
-                <option value="09:30">9:30 AM</option>
-                <option value="10:00">10:00 AM</option>
-                <option value="10:30">10:30 AM</option>
-                <option value="11:00">11:00 AM</option>
-                <option value="11:30">11:30 AM</option>
-                <option value="12:00">12:00 PM</option>
-                <option value="12:30">12:30 PM</option>
-                <option value="13:00">1:00 PM</option>
-                <option value="13:30">1:30 PM</option>
-                <option value="14:00">2:00 PM</option>
-                <option value="14:30">2:30 PM</option>
-                <option value="15:00">3:00 PM</option>
-                <option value="15:30">3:30 PM</option>
-                <option value="16:00">4:00 PM</option>
-                <option value="16:30">4:30 PM</option>
-                <option value="17:00">5:00 PM</option>
-                <option value="17:30">5:30 PM</option>
-                <option value="18:00">6:00 PM</option>
-                <option value="18:30">6:30 PM</option>
-                <option value="19:00">7:00 PM</option>
-                <option value="19:30">7:30 PM</option>
+                <option value="">
+                  {selectedService ? 'Select time...' : 'Select a service first...'}
+                </option>
+                {availableTimeSlots.map((slot) => (
+                  <option key={slot.value} value={slot.value}>
+                    {slot.label}
+                  </option>
+                ))}
               </select>
+              {selectedService && (
+                <p className="mt-2 text-sm text-gray-500">
+                  Service ends at closing time (8:00 PM). Showing available slots for {selectedService.duration_minutes}-minute service.
+                </p>
+              )}
             </div>
           </div>
 
