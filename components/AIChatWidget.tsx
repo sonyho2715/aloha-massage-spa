@@ -144,48 +144,48 @@ export default function AIChatWidget() {
 
   return (
     <>
-      {/* Chat Widget Button */}
+      {/* Chat Widget Button - Glassmorphism */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-gradient-to-br from-coral via-coral-dark to-coral-dark text-white rounded-full w-16 h-16 shadow-glow hover:shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+          className="fixed bottom-6 right-6 z-50 bg-coral/90 backdrop-blur-lg text-white rounded-full w-16 h-16 shadow-glass-lg hover:shadow-2xl hover:bg-coral transform hover:scale-110 transition-all duration-300 flex items-center justify-center group border border-white/20"
           aria-label="Open AI Chat Assistant"
         >
           <div className="relative">
             <span className="text-3xl">💬</span>
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-sage rounded-full animate-pulse"></div>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-sage rounded-full animate-pulse shadow-glow-teal"></div>
           </div>
         </button>
       )}
 
-      {/* Chat Window */}
+      {/* Chat Window - Glassmorphism */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-3rem)] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden border-2 border-ocean-blue/10 animate-fade-in-up">
-          {/* Header */}
-          <div className="bg-gradient-to-br from-ocean-blue via-teal to-ocean-blue-light text-white p-6 rounded-t-3xl flex items-center justify-between">
+        <div className="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-3rem)] bg-white/80 backdrop-blur-2xl rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-white/40 animate-fade-in-up">
+          {/* Header - Glass Effect */}
+          <div className="bg-ocean-blue/90 backdrop-blur-xl text-white p-6 rounded-t-3xl flex items-center justify-between border-b border-white/20">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-2xl border-2 border-white/30">
+                <div className="w-12 h-12 bg-white/25 backdrop-blur-md rounded-full flex items-center justify-center text-2xl border border-white/40 shadow-glass">
                   🌺
                 </div>
-                <div className="absolute bottom-0 right-0 w-3 h-3 bg-sage rounded-full border-2 border-white"></div>
+                <div className="absolute bottom-0 right-0 w-3 h-3 bg-sage rounded-full border-2 border-white shadow-glow-teal"></div>
               </div>
               <div>
-                <h3 className="font-heading text-lg font-bold">Aloha Assistant</h3>
-                <p className="text-xs text-white/80">Always here to help</p>
+                <h3 className="font-heading text-lg font-bold drop-shadow-lg">Aloha Assistant</h3>
+                <p className="text-xs text-white/90">Always here to help</p>
               </div>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              className="w-8 h-8 rounded-full bg-white/15 backdrop-blur-sm hover:bg-white/25 flex items-center justify-center transition-all border border-white/20"
               aria-label="Close chat"
             >
               <span className="text-xl">×</span>
             </button>
           </div>
 
-          {/* Messages Area */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-warm-white">
+          {/* Messages Area - Transparent Glass Background */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-warm-white/40 backdrop-blur-sm">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -194,8 +194,8 @@ export default function AIChatWidget() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-3 ${
                     message.role === "user"
-                      ? "bg-gradient-to-br from-ocean-blue to-teal text-white rounded-br-sm"
-                      : "bg-white border border-stone-light/40 text-charcoal rounded-bl-sm shadow-soft"
+                      ? "bg-ocean-blue/90 backdrop-blur-lg text-white rounded-br-sm shadow-glass border border-white/20"
+                      : "bg-white/90 backdrop-blur-md border border-stone-light/40 text-charcoal rounded-bl-sm shadow-soft"
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">{message.content}</p>
@@ -213,10 +213,10 @@ export default function AIChatWidget() {
               </div>
             ))}
 
-            {/* Typing Indicator */}
+            {/* Typing Indicator - Glass Effect */}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-white border border-stone-light/40 rounded-2xl rounded-bl-sm px-4 py-3 shadow-soft">
+                <div className="bg-white/90 backdrop-blur-md border border-stone-light/40 rounded-2xl rounded-bl-sm px-4 py-3 shadow-glass">
                   <div className="flex gap-1">
                     <div className="w-2 h-2 bg-ocean-blue rounded-full animate-bounce"></div>
                     <div className="w-2 h-2 bg-teal rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
@@ -229,10 +229,10 @@ export default function AIChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Quick Actions */}
+          {/* Quick Actions - Glass Effect */}
           {messages.length <= 1 && (
-            <div className="px-4 py-3 bg-sand-light/30 border-t border-stone-light/20">
-              <p className="text-xs text-stone-dark mb-2 font-semibold">Quick Actions:</p>
+            <div className="px-4 py-3 bg-sand-light/20 backdrop-blur-sm border-t border-white/30">
+              <p className="text-xs text-charcoal mb-2 font-semibold">Quick Actions:</p>
               <div className="flex flex-wrap gap-2">
                 {quickActions.map((action, index) => (
                   <button
@@ -241,7 +241,7 @@ export default function AIChatWidget() {
                       setInputValue(action.message);
                       setTimeout(() => handleSendMessage(), 100);
                     }}
-                    className="text-xs bg-white hover:bg-ocean-blue hover:text-white text-ocean-blue px-3 py-1.5 rounded-full border border-ocean-blue/20 transition-all duration-200"
+                    className="text-xs bg-white/80 backdrop-blur-sm hover:bg-ocean-blue hover:text-white text-ocean-blue px-3 py-1.5 rounded-full border border-ocean-blue/30 transition-all duration-200 shadow-soft"
                   >
                     {action.label}
                   </button>
@@ -250,8 +250,8 @@ export default function AIChatWidget() {
             </div>
           )}
 
-          {/* Input Area */}
-          <div className="p-4 bg-white border-t border-stone-light/20">
+          {/* Input Area - Glass Effect */}
+          <div className="p-4 bg-white/60 backdrop-blur-xl border-t border-white/40">
             <div className="flex gap-2 items-end">
               <input
                 ref={inputRef}
@@ -260,12 +260,12 @@ export default function AIChatWidget() {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Ask me anything..."
-                className="flex-1 px-4 py-3 border-2 border-stone-light/40 rounded-xl focus:border-ocean-blue focus:ring-4 focus:ring-ocean-blue/20 transition-all text-sm"
+                className="flex-1 px-4 py-3 bg-white/80 backdrop-blur-sm border-2 border-stone-light/40 rounded-xl focus:border-ocean-blue focus:ring-4 focus:ring-ocean-blue/20 transition-all text-sm shadow-soft"
               />
               <button
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
-                className="bg-gradient-to-br from-coral to-coral-dark hover:from-coral-dark hover:to-coral text-white p-3 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-glow hover:shadow-xl transform hover:scale-105 disabled:transform-none"
+                className="bg-coral/90 backdrop-blur-lg hover:bg-coral text-white p-3 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-glass-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none border border-white/20"
                 aria-label="Send message"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -273,7 +273,7 @@ export default function AIChatWidget() {
                 </svg>
               </button>
             </div>
-            <p className="text-xs text-stone mt-2 text-center">
+            <p className="text-xs text-charcoal/70 mt-2 text-center">
               Powered by AI • Available 24/7 🌺
             </p>
           </div>
