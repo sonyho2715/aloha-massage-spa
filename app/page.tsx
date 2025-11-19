@@ -15,7 +15,7 @@ import GiftCards from "@/components/GiftCards";
 import LotteryPromo from "@/components/LotteryPromo";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
-import FloatingBookButton from "@/components/FloatingBookButton";
+import AIChatWidget from "@/components/AIChatWidget";
 import FreeGiftModal from "@/components/FreeGiftModal";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
       <LotteryPromo />
       <Newsletter />
       <Footer />
-      <FloatingBookButton />
+      <AIChatWidget />
       <FreeGiftModal />
     </main>
   );
