@@ -3,18 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1e3a8a;
-  --primary-light: #3b82f6;
-  --primary-dark: #1e40af;
-  --accent: #60a5fa;
-  --warm-taupe: #C9B8A3;
+  /* Primary - Hawaiian Ocean & Tropical Waters */
+  --ocean-blue: #0077BE;
+  --ocean-blue-light: #3AA0D8;
+  --ocean-blue-dark: #005A92;
+  --teal: #008B8B;
+  --teal-light: #20B2AA;
+  --teal-dark: #006666;
+  --sage: #88B04B;
+
+  /* Accent - Tropical Warmth */
+  --coral: #FF6F61;
+  --coral-light: #FF9B8E;
+  --coral-dark: #E5564A;
+  --sand: #F4E4C1;
+  --plumeria: #FFE5E8;
+
+  /* Neutrals */
+  --charcoal: #2C3E50;
+  --warm-white: #FFF8F0;
+  --stone: #A39B8B;
+
+  /* Luxury Accent */
   --gold: #D4AF37;
-  --cream: #FAF8F5;
+
+  /* Legacy support */
+  --primary: #0077BE;
+  --accent: #FF6F61;
+  --cream: #FFF8F0;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,13 +44,53 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* Custom animations */
+/* Enhanced Wellness Animations */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 111, 97, 0.6);
   }
 }
 
@@ -50,17 +112,39 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  50% {
-    box-shadow: 0 0 40px rgba(96, 165, 250, 0.8);
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
   }
 }
 
+/* Animation Classes */
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
 }
 
 .animate-gradient {
@@ -73,50 +157,113 @@ h1, h2, h3, h4, h5, h6 {
   animation: shimmer 2s infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-/* Hover effects */
+/* Hover Effects - Wellness Appropriate (Gentle) */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Smooth Scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar - Wellness Theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--ocean-blue), var(--teal));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--ocean-blue-dark), var(--teal-dark));
 }
 
 @layer components {
+  /* Button Styles - Conversion Optimized */
   .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300;
+    @apply bg-coral hover:bg-coral-dark text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-glow hover:shadow-2xl transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-ocean-blue hover:bg-ocean-blue-dark text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-2 px-6 rounded-full transition-all duration-300;
+    @apply border-2 border-ocean-blue text-ocean-blue hover:bg-ocean-blue hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105;
   }
 
+  .btn-ghost {
+    @apply text-ocean-blue hover:text-teal font-medium underline decoration-2 underline-offset-4 hover:decoration-coral transition-colors duration-300;
+  }
+
+  /* Section Styles */
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center text-primary mb-12;
+    @apply text-4xl md:text-5xl font-bold font-heading text-center text-ocean-blue mb-8;
   }
 
+  .section-subtitle {
+    @apply text-xl text-charcoal-light text-center max-w-3xl mx-auto leading-relaxed mb-12;
+  }
+
+  /* Card Styles - Luxury Wellness */
   .card {
-    @apply bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 hover:scale-105;
+    @apply bg-white rounded-2xl shadow-soft p-6 transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1;
+  }
+
+  .card-glass {
+    @apply bg-white/15 backdrop-blur-lg rounded-2xl border border-white/30 shadow-glass p-6 transition-all duration-300 hover:shadow-glass-lg hover:bg-white/20;
+  }
+
+  /* Input Styles */
+  .input-primary {
+    @apply w-full px-4 py-3 border-2 border-stone-light/40 rounded-xl focus:border-ocean-blue focus:ring-4 focus:ring-ocean-blue/20 transition-all;
+  }
+}
+
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient-ocean {
+    @apply bg-gradient-to-r from-ocean-blue to-teal bg-clip-text text-transparent;
+  }
+
+  .text-gradient-tropical {
+    @apply bg-gradient-to-r from-coral to-plumeria bg-clip-text text-transparent;
+  }
+
+  /* Background Patterns */
+  .bg-tropical {
+    background-image: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal) 100%);
+  }
+
+  .bg-sunset {
+    background-image: linear-gradient(135deg, var(--coral) 0%, var(--sand) 100%);
   }
 }
