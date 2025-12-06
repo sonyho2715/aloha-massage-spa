@@ -11,7 +11,7 @@
     "test-db": "node scripts/test-db.js"
   },
   "engines": {
-    "node": "22.x",
+    "node": ">=24.0.0",
     "npm": ">=10.0.0"
   },
   "keywords": [],
