@@ -80,7 +80,7 @@ export async function createBooking(formData: FormData) {
 
     // Handle gift card if provided
     let giftCardId: string | undefined;
-    let totalPrice = service.price;
+    const totalPrice = service.price;
 
     if (validated.data.giftCardCode) {
       const giftCard = await db.giftCard.findUnique({

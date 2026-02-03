@@ -60,14 +60,14 @@ export default function ContactPage() {
           <div className="max-w-3xl text-white text-center mx-auto">
             <Badge variant="info" className="mb-4 bg-white/20 text-white border-white/30">
               <Heart className="w-3 h-3 mr-1" />
-              We're Here for You
+              We&apos;re Here for You
             </Badge>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               Get in Touch
             </h1>
             <p className="text-xl text-slate-200 leading-relaxed">
               Have a question? Want to book an appointment? Or just want to say aloha?
-              We'd love to hear from you.
+              We&apos;d love to hear from you.
             </p>
           </div>
         </Container>
@@ -118,7 +118,7 @@ export default function ContactPage() {
             <div className="text-white">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">Visit Our Spa</h2>
               <p className="text-xl text-sky-100 mb-6">
-                We're located in the heart of Honolulu, easily accessible with free parking available.
+                We&apos;re located in the heart of Honolulu, easily accessible with free parking available.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -185,14 +185,14 @@ export default function ContactPage() {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Have a question or special request? Fill out the form and we'll get back to you within 24 hours.
+                Have a question or special request? Fill out the form and we&apos;ll get back to you within 24 hours.
               </p>
 
               {/* Personal Note */}
               <div className="bg-gradient-to-br from-slate-50 to-sky-50 rounded-2xl p-8">
                 <p className="text-slate-600 italic text-lg leading-relaxed">
-                  "When you arrive, you'll instantly feel the comfort of Aloha. Our welcoming
-                  lobby sets the tone for your relaxing experience. We can't wait to see you!"
+                  &quot;When you arrive, you&apos;ll instantly feel the comfort of Aloha. Our welcoming
+                  lobby sets the tone for your relaxing experience. We can&apos;t wait to see you!&quot;
                 </p>
                 <p className="mt-4 text-sky-600 font-medium">— The Aloha Massage Spa Team</p>
               </div>
@@ -239,7 +239,7 @@ export default function ContactPage() {
                       </label>
                       <select className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-sky-500 bg-white">
                         <option value="">Select a topic</option>
-                        <option value="booking">I'd like to book an appointment</option>
+                        <option value="booking">I&apos;d like to book an appointment</option>
                         <option value="services">Question about services</option>
                         <option value="gift">Gift cards inquiry</option>
                         <option value="feedback">Share feedback</option>
@@ -277,7 +277,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-sky-700/90 to-sky-600/80" />
         <Container className="relative z-10">
           <div className="max-w-2xl mx-auto text-center text-white">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Book Your "Me Time"?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Ready to Book Your &quot;Me Time&quot;?</h2>
             <p className="text-xl text-sky-100 mb-10">
               Skip the form and book your appointment directly. Your relaxation is just a click away.
             </p>

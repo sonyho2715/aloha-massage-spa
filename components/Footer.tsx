@@ -24,7 +24,7 @@ export function Footer() {
                 Your sanctuary for relaxation and wellness in Honolulu.
               </p>
               <p className="text-slate-500 text-sm mb-4 italic">
-                "You deserve your 'me time.' Let us take care of you."
+                &quot;You deserve your &apos;me time.&apos; Let us take care of you.&quot;
               </p>
               <div className="flex gap-4">
                 <a
@@ -59,7 +59,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/book" className="hover:text-cyan-400 transition-colors">
-                    Book Your "Me Time"
+                    Book Your &quot;Me Time&quot;
                   </Link>
                 </li>
                 <li>

@@ -117,7 +117,7 @@ export default function AboutPage() {
                 of creating a sanctuary where these traditions could thrive.
               </p>
               <p className="text-lg text-slate-600">
-                Today, we're honored to serve thousands of guests each year, helping them
+                Today, we&apos;re honored to serve thousands of guests each year, helping them
                 find the relaxation, healing, and renewal they deserve.
               </p>
             </div>
@@ -165,11 +165,11 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-sky-100 leading-relaxed mb-4">
                   I understand how busy life gets. Between work, family, and everything else,
-                  it's easy to put yourself last. But here's what I've learned:
-                  <strong className="text-white"> you can't pour from an empty cup</strong>.
+                  it&apos;s easy to put yourself last. But here&apos;s what I&apos;ve learned:
+                  <strong className="text-white"> you can&apos;t pour from an empty cup</strong>.
                 </p>
                 <p className="text-sky-100 leading-relaxed mb-4">
-                  That's why I created Aloha Massage Spa—to be a place where you can
+                  That&apos;s why I created Aloha Massage Spa, to be a place where you can
                   step away from your responsibilities and give your body and mind the care they deserve.
                 </p>
                 <p className="text-xl font-medium text-cyan-300">
@@ -187,7 +187,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">What We Believe</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              These aren't just words on a wall. They guide everything we do.
+              These aren&apos;t just words on a wall. They guide everything we do.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export default function AboutPage() {
                     {therapist.specialty} • {therapist.years} yrs
                   </p>
                   <p className="text-slate-600 text-sm">{therapist.bio}</p>
-                  <p className="text-slate-400 italic text-xs mt-3">"{therapist.quote}"</p>
+                  <p className="text-slate-400 italic text-xs mt-3">&quot;{therapist.quote}&quot;</p>
                 </CardContent>
               </Card>
             ))}
@@ -252,7 +252,7 @@ export default function AboutPage() {
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Come Experience the Aloha Difference</h2>
             <p className="text-xl text-sky-100 mb-10">
-              We can't wait to welcome you. Book your first appointment and see why
+              We can&apos;t wait to welcome you. Book your first appointment and see why
               our guests keep coming back.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

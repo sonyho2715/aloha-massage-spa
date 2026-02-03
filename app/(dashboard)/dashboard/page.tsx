@@ -5,7 +5,7 @@ import { Card, CardContent, Button, Badge } from '@/components/ui';
 import { requireAuth } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { formatPrice, formatDate, formatTime, formatDuration } from '@/lib/utils';
-import type { Booking, Service, Therapist, BookingStatus } from '@/app/generated/prisma/client';
+import type { Booking, Service, Therapist } from '@/app/generated/prisma/client';
 
 type BookingWithRelations = Booking & {
   service: Service;

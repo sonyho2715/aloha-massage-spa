@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Calendar, Clock, User, ArrowRight, ArrowLeft, Check } from 'lucide-react';
 import { Container, Card, CardContent, Button, Input, Textarea, Badge } from '@/components/ui';
@@ -45,7 +45,7 @@ export default function BookingPage() {
   const router = useRouter();
   const preselectedService = searchParams.get('service');
 
-  const [step, setStep] = useState<Step>('service');
+  const [step, setStep] = useState<Step>(preselectedService ? 'datetime' : 'service');
   const [selectedService, setSelectedService] = useState<string | null>(preselectedService);
   const [selectedTherapist, setSelectedTherapist] = useState<string | null>(null);
   const [selectedDate, setSelectedDate] = useState<string>('');
@@ -63,11 +63,6 @@ export default function BookingPage() {
   minDate.setDate(minDate.getDate() + 1);
   const minDateStr = minDate.toISOString().split('T')[0];
 
-  useEffect(() => {
-    if (preselectedService) {
-      setStep('datetime');
-    }
-  }, [preselectedService]);
 
   const handleSubmit = async () => {
     if (!selectedService || !selectedDate || !selectedTime) {

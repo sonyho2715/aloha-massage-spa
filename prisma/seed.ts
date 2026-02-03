@@ -286,7 +286,6 @@ async function main() {
   console.log('✅ Created', services.length, 'services');
 
   // Create business hours
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   for (let i = 0; i < 7; i++) {
     await prisma.businessHours.upsert({
       where: { dayOfWeek: i },

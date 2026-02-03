@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Star, Clock, Award, Users, ArrowRight, Phone, Sparkles, Heart, Leaf, MapPin } from 'lucide-react';
+import { Star, Clock, Award, ArrowRight, Phone, Sparkles, Heart, Leaf, MapPin } from 'lucide-react';
 import { Container, Button, Card, CardContent, Badge } from '@/components/ui';
 import { ParallaxHero } from '@/components/ParallaxHero';
 import { formatPrice, formatDuration } from '@/lib/utils';
@@ -176,8 +176,8 @@ export default function HomePage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              Life moves fast. You work hard, deal with stress you weren't looking for,
-              and handle "life" every day. Now is the perfect time to pause and breathe.
+              Life moves fast. You work hard, deal with stress you weren&apos;t looking for,
+              and handle &quot;life&quot; every day. Now is the perfect time to pause and breathe.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed mb-6">
               Whether you need to unwind with a classic Swedish massage, work out tension
@@ -206,7 +206,7 @@ export default function HomePage() {
               Let Us Spoil You
             </h2>
             <p className="text-xl text-sky-100 mb-8">
-              You work hard, deal with "life" every day, and deserve <strong>"you time."</strong>
+              You work hard, deal with &quot;life&quot; every day, and deserve <strong>&quot;you time.&quot;</strong>
               Your experience at Aloha Massage Spa will be like stepping out of life for a moment.
             </p>
             <p className="text-2xl font-medium text-cyan-300 mb-10">
@@ -296,13 +296,13 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-4">
                 As the owner of Aloha Massage Spa, I understand how important it is to
-                take a moment for yourself, whether you're seeking relief from physical
+                take a moment for yourself, whether you&apos;re seeking relief from physical
                 aches or just need a brief escape from the daily grind.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
                 At our spa, we start by calming your senses with serene visuals, soothing
                 sounds, and delightful aromas. This peaceful setting ensures that your visit
-                provides the perfect "me time" that you both need and deserve.
+                provides the perfect &quot;me time&quot; that you both need and deserve.
               </p>
               <p className="text-xl font-medium text-sky-700">
                 — Angela, Owner & Lead Therapist
@@ -429,9 +429,9 @@ export default function HomePage() {
               Relax in Our Unique Environment
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed mb-6">
-              When you visit us, you'll instantly feel the comfort of Aloha upon
+              When you visit us, you&apos;ll instantly feel the comfort of Aloha upon
               entering our welcoming lobby. As you step into the therapy area,
-              you'll be absorbed by our peaceful atmosphere.
+              you&apos;ll be absorbed by our peaceful atmosphere.
             </p>
             <p className="text-xl text-slate-300 leading-relaxed mb-8">
               Your mind and soul will begin to relax as a warming calm takes over.
@@ -543,10 +543,10 @@ export default function HomePage() {
         <Container className="relative z-10">
           <div className="text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Ready for Your "Me Time"?
+              Ready for Your &quot;Me Time&quot;?
             </h2>
             <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
-              Don't wait any longer. You deserve to feel relaxed, renewed, and
+              Don&apos;t wait any longer. You deserve to feel relaxed, renewed, and
               completely at peace. Book your appointment today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

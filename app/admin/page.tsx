@@ -5,7 +5,7 @@ import { Card, CardContent, Badge, Button } from '@/components/ui';
 import { requireAdmin } from '@/lib/auth';
 import { db } from '@/lib/db';
 import { formatPrice, formatDate, formatTime } from '@/lib/utils';
-import type { Booking, Service, Therapist, User, BookingStatus } from '@/app/generated/prisma/client';
+import type { Booking, Service, Therapist, User } from '@/app/generated/prisma/client';
 
 type AdminBooking = Booking & {
   user: Pick<User, 'name' | 'email'>;

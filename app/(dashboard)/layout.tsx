@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Calendar, User, LogOut, Gift } from 'lucide-react';
 import { Container, Button } from '@/components/ui';
 import { getCurrentUser, getSession } from '@/lib/auth';
-import { logout } from '@/app/actions/auth';
 
 const navItems = [
   { href: '/dashboard', label: 'My Bookings', icon: Calendar },

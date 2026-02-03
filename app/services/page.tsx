@@ -177,7 +177,7 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="text-xl text-slate-200 leading-relaxed">
-              You work hard. You deal with stress every day. Now it's time to take care of <strong>you</strong>.
+              You work hard. You deal with stress every day. Now it&apos;s time to take care of <strong>you</strong>.
             </p>
           </div>
         </Container>
@@ -293,8 +293,8 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Not Sure Which Treatment Is Right for You?</h2>
             <p className="text-xl text-sky-100 mb-6">
-              That's okay! Everyone's body is different. Give us a call and
-              we'll help you find the perfect treatment.
+              That&apos;s okay! Everyone&apos;s body is different. Give us a call and
+              we&apos;ll help you find the perfect treatment.
             </p>
             <p className="text-sky-200 mb-10">
               Our team genuinely cares about helping you feel your best. No pressure, just honest guidance.
