@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface ParallaxHeroProps {
   imageUrl: string;
@@ -16,14 +16,27 @@ export function ParallaxHero({
   children,
 }: ParallaxHeroProps) {
   const [scrollY, setScrollY] = useState(0);
+  const ticking = useRef(false);
+  const rafId = useRef<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking.current) {
+        rafId.current = requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId.current) {
+        cancelAnimationFrame(rafId.current);
+      }
+    };
   }, []);
 
   return (
