@@ -1,8 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+// Aloha Massage Spa - Database Schema
+// PostgreSQL hosted on Railway
 
 generator client {
   provider = "prisma-client"
@@ -11,4 +8,198 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+// ============================================
+// USER & AUTHENTICATION
+// ============================================
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  phone     String?
+  role      Role     @default(CUSTOMER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  bookings     Booking[]
+  giftCards    GiftCard[]    @relation("PurchasedBy")
+  receivedGifts GiftCard[]   @relation("ReceivedBy")
+
+  @@index([email])
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+  THERAPIST
+}
+
+// ============================================
+// SERVICES
+// ============================================
+
+model Service {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  duration    Int      // minutes
+  price       Int      // cents (e.g., 8500 = $85.00)
+  category    ServiceCategory
+  imageUrl    String?
+  isActive    Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  bookings Booking[]
+
+  @@index([category])
+  @@index([isActive])
+}
+
+enum ServiceCategory {
+  MASSAGE
+  FACIAL
+  BODY_TREATMENT
+  PACKAGE
+}
+
+// ============================================
+// THERAPISTS
+// ============================================
+
+model Therapist {
+  id           String   @id @default(cuid())
+  name         String
+  bio          String?
+  specialties  String[] // Array of specialties
+  imageUrl     String?
+  isActive     Boolean  @default(true)
+  yearsExp     Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  bookings     Booking[]
+  availability TherapistAvailability[]
+
+  @@index([isActive])
+}
+
+model TherapistAvailability {
+  id          String   @id @default(cuid())
+  therapistId String
+  dayOfWeek   Int      // 0 = Sunday, 6 = Saturday
+  startTime   String   // "09:00"
+  endTime     String   // "17:00"
+  isAvailable Boolean  @default(true)
+
+  therapist Therapist @relation(fields: [therapistId], references: [id], onDelete: Cascade)
+
+  @@unique([therapistId, dayOfWeek])
+  @@index([therapistId])
+}
+
+// ============================================
+// BOOKINGS
+// ============================================
+
+model Booking {
+  id          String        @id @default(cuid())
+  userId      String
+  serviceId   String
+  therapistId String?
+  date        DateTime      // Date and time of appointment
+  endTime     DateTime      // Calculated end time
+  status      BookingStatus @default(PENDING)
+  notes       String?
+  totalPrice  Int           // cents
+  giftCardId  String?       // If paid with gift card
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  user      User       @relation(fields: [userId], references: [id])
+  service   Service    @relation(fields: [serviceId], references: [id])
+  therapist Therapist? @relation(fields: [therapistId], references: [id])
+  giftCard  GiftCard?  @relation(fields: [giftCardId], references: [id])
+
+  @@index([userId])
+  @@index([therapistId])
+  @@index([date])
+  @@index([status])
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+// ============================================
+// GIFT CARDS
+// ============================================
+
+model GiftCard {
+  id           String    @id @default(cuid())
+  code         String    @unique
+  amount       Int       // Original amount in cents
+  balance      Int       // Remaining balance in cents
+  purchaserId  String
+  recipientId  String?
+  recipientEmail String?
+  recipientName  String?
+  message      String?
+  isActive     Boolean   @default(true)
+  expiresAt    DateTime?
+  createdAt    DateTime  @default(now())
+
+  purchaser User      @relation("PurchasedBy", fields: [purchaserId], references: [id])
+  recipient User?     @relation("ReceivedBy", fields: [recipientId], references: [id])
+  bookings  Booking[]
+
+  @@index([code])
+  @@index([purchaserId])
+}
+
+// ============================================
+// BUSINESS SETTINGS
+// ============================================
+
+model BusinessHours {
+  id        String  @id @default(cuid())
+  dayOfWeek Int     @unique // 0 = Sunday, 6 = Saturday
+  isOpen    Boolean @default(true)
+  openTime  String  // "09:00"
+  closeTime String  // "18:00"
+}
+
+model SiteSettings {
+  id              String  @id @default("settings")
+  businessName    String  @default("Aloha Massage Spa")
+  phone           String  @default("")
+  email           String  @default("")
+  address         String  @default("")
+  bookingLeadTime Int     @default(24) // Hours in advance required
+  cancellationWindow Int  @default(24) // Hours before appointment
+  taxRate         Int     @default(0)  // Percentage * 100 (e.g., 475 = 4.75%)
+}
+
+// ============================================
+// REVIEWS & TESTIMONIALS
+// ============================================
+
+model Review {
+  id          String   @id @default(cuid())
+  name        String
+  rating      Int      // 1-5
+  comment     String
+  isApproved  Boolean  @default(false)
+  isFeatured  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@index([isApproved, isFeatured])
 }

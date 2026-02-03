@@ -4,7 +4,8 @@ import { cookies } from 'next/headers';
 export interface SessionData {
   userId: string;
   email: string;
-  role: 'USER' | 'ADMIN';
+  name: string;
+  role: 'CUSTOMER' | 'ADMIN' | 'THERAPIST';
   isLoggedIn: boolean;
 }
 
@@ -30,4 +31,25 @@ export async function requireAuth() {
     throw new Error('Unauthorized');
   }
   return session;
+}
+
+export async function requireAdmin() {
+  const session = await requireAuth();
+  if (session.role !== 'ADMIN') {
+    throw new Error('Forbidden: Admin access required');
+  }
+  return session;
+}
+
+export async function getCurrentUser() {
+  const session = await getSession();
+  if (!session.isLoggedIn || !session.userId) {
+    return null;
+  }
+  return {
+    userId: session.userId,
+    email: session.email,
+    name: session.name,
+    role: session.role,
+  };
 }
