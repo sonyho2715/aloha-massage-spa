@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Clock, Heart, ArrowRight, Car, Navigation } from 'lucide-react';
-import { Container, Card, CardContent, Input, Textarea, Button, Badge } from '@/components/ui';
+import { Container, Card, CardContent, Button, Badge } from '@/components/ui';
 import { ParallaxHero } from '@/components/ParallaxHero';
+import { ContactForm } from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Aloha Massage Spa',
@@ -207,60 +208,7 @@ export default function ContactPage() {
 
             {/* Right Side - Form */}
             <div>
-              <Card variant="elevated">
-                <CardContent>
-                  <form className="space-y-5">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <Input
-                        label="First Name"
-                        placeholder="Your first name"
-                        required
-                      />
-                      <Input
-                        label="Last Name"
-                        placeholder="Your last name"
-                        required
-                      />
-                    </div>
-                    <Input
-                      label="Email"
-                      type="email"
-                      placeholder="you@example.com"
-                      required
-                    />
-                    <Input
-                      label="Phone (Optional)"
-                      type="tel"
-                      placeholder="(808) 123-4567"
-                    />
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1.5">
-                        What can we help you with?
-                      </label>
-                      <select className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-sky-500 bg-white">
-                        <option value="">Select a topic</option>
-                        <option value="booking">I&apos;d like to book an appointment</option>
-                        <option value="services">Question about services</option>
-                        <option value="gift">Gift cards inquiry</option>
-                        <option value="feedback">Share feedback</option>
-                        <option value="other">Something else</option>
-                      </select>
-                    </div>
-                    <Textarea
-                      label="Your Message"
-                      placeholder="Tell us how we can help you..."
-                      rows={5}
-                      required
-                    />
-                    <Button type="submit" className="w-full" size="lg">
-                      Send Message
-                    </Button>
-                    <p className="text-center text-sm text-slate-500">
-                      We typically respond within 24 hours.
-                    </p>
-                  </form>
-                </CardContent>
-              </Card>
+              <ContactForm />
             </div>
           </div>
         </Container>
