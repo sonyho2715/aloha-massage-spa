@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Star, Clock, Award, Users, ArrowRight, Phone, Sparkles, Heart, Leaf, MapPin } from 'lucide-react';
 import { Container, Button, Card, CardContent, Badge } from '@/components/ui';
+import { ParallaxHero } from '@/components/ParallaxHero';
 import { formatPrice, formatDuration } from '@/lib/utils';
 
 // Featured services data
@@ -12,6 +13,7 @@ const featuredServices = [
     duration: 60,
     price: 9500,
     category: 'MASSAGE',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400',
   },
   {
     id: '2',
@@ -20,6 +22,7 @@ const featuredServices = [
     duration: 60,
     price: 10500,
     category: 'MASSAGE',
+    image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400',
   },
   {
     id: '3',
@@ -28,6 +31,7 @@ const featuredServices = [
     duration: 90,
     price: 22000,
     category: 'PACKAGE',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400',
   },
   {
     id: '4',
@@ -36,6 +40,7 @@ const featuredServices = [
     duration: 75,
     price: 12500,
     category: 'MASSAGE',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400',
   },
 ];
 
@@ -63,7 +68,7 @@ const testimonials = [
   {
     name: 'Freida F.',
     rating: 5,
-    text: "Booked this place due to having a bad experience at my resort's spa. I had just flew in from my flight and went straight to get my couples massage. I was frustrated and irritable due to having a bad day. Angela was very welcoming and nice to us. She provided amazing customer care and also gave us some wise words. The massage was amazing. I felt a load off my back. After that everything went great for the rest of our trip. Thanks Angela for being so kind to us and understanding. When I come back I will book with you again.",
+    text: "Booked this place due to having a bad experience at my resort's spa. Angela was very welcoming and nice to us. She provided amazing customer care and also gave us some wise words. The massage was amazing. I felt a load off my back. Thanks Angela for being so kind!",
     source: 'Facebook',
   },
   {
@@ -86,68 +91,60 @@ const therapists = [
     name: 'Angela',
     title: 'Owner & Lomi Lomi Specialist',
     years: 15,
-    bio: 'Angela learned the art of Lomi Lomi from her grandmother, a native Hawaiian healer. Her passion for preserving traditional healing arts led her to open Aloha Massage Spa.',
+    bio: 'Angela learned the art of Lomi Lomi from her grandmother, a native Hawaiian healer.',
   },
   {
     name: 'Tony',
     title: 'Deep Tissue & Sports Expert',
     years: 10,
-    bio: 'With a background in sports medicine, Tony specializes in therapeutic techniques that help athletes and active individuals recover.',
+    bio: 'With a background in sports medicine, Tony specializes in therapeutic techniques.',
   },
   {
     name: 'Andy',
     title: 'Swedish & Hot Stone Specialist',
     years: 6,
-    bio: 'Andy brings a calm, intuitive approach to massage therapy. His gentle techniques create a deeply relaxing experience.',
+    bio: 'Andy brings a calm, intuitive approach to massage therapy.',
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section with Welcome Message */}
-      <section className="relative hero-pattern py-16 lg:py-28">
+      {/* Hero Section with Parallax */}
+      <ParallaxHero
+        imageUrl="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070"
+        height="min-h-[95vh]"
+      >
         <Container>
-          <div className="max-w-4xl">
+          <div className="max-w-3xl text-white">
             {/* Aloha Greeting */}
-            <p className="text-2xl text-teal-600 font-medium mb-4">Aloha,</p>
+            <p className="text-2xl text-cyan-300 font-medium mb-4 animate-fade-in">Aloha,</p>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight mb-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               You Deserve a Moment of{' '}
-              <span className="text-gradient">Peace</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-300">
+                Peace
+              </span>
             </h1>
 
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-stone-200">
-              <p className="text-lg text-stone-700 leading-relaxed">
-                Life moves fast. You work hard, deal with stress you weren't looking for,
-                and handle "life" every day. Now is the perfect time to pause and breathe.
-              </p>
-              <p className="text-lg text-stone-700 leading-relaxed mt-4">
-                Whether you need to unwind with a classic Swedish massage, work out tension
-                with Deep Tissue, or experience the warmth of Hot Stone therapy, we have
-                a ritual designed just for <strong>you</strong>.
-              </p>
-              <p className="text-stone-600 mt-4 italic">
-                Make your well-being a priority. The only thing you need to worry about
-                now is which massage to choose.
-              </p>
-              <p className="mt-4 text-stone-700">
-                We look forward to welcoming you soon.
-              </p>
-              <p className="mt-2 font-medium text-teal-700">
-                Warmly, The Aloha Massage Spa Team 🌺
-              </p>
-            </div>
+            <p className="text-xl lg:text-2xl text-slate-200 mb-8 leading-relaxed max-w-2xl">
+              Escape to tranquility with authentic Hawaiian healing traditions.
+              Let our skilled therapists melt away your stress.
+            </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/book">
-                <Button size="lg" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-sky-500 hover:bg-sky-600 text-lg px-8">
                   Book Your Escape
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+18081234567">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto border-white/50 text-white hover:bg-white/10 text-lg"
+                >
                   <Phone className="w-5 h-5 mr-2" />
                   (808) 123-4567
                 </Button>
@@ -155,124 +152,161 @@ export default function HomePage() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-6 mt-10 pt-6 border-t border-stone-200">
+            <div className="flex flex-wrap gap-6 pt-6 border-t border-white/20">
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
-                <span className="font-semibold text-stone-900">4.9</span>
-                <span className="text-stone-500">(500+ reviews)</span>
+                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <span className="font-semibold">4.9</span>
+                <span className="text-slate-300">(500+ reviews)</span>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-teal-600" />
-                <span className="text-stone-600">Licensed & Certified</span>
+                <Award className="w-5 h-5 text-cyan-400" />
+                <span className="text-slate-200">Licensed & Certified</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-teal-600" />
-                <span className="text-stone-600">Honolulu, Hawaii</span>
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span className="text-slate-200">Honolulu, Hawaii</span>
               </div>
+            </div>
+          </div>
+        </Container>
+      </ParallaxHero>
+
+      {/* Welcome Message Section */}
+      <section className="py-20 bg-[#faf8f5]">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Life moves fast. You work hard, deal with stress you weren't looking for,
+              and handle "life" every day. Now is the perfect time to pause and breathe.
+            </p>
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              Whether you need to unwind with a classic Swedish massage, work out tension
+              with Deep Tissue, or experience the warmth of Hot Stone therapy, we have
+              a ritual designed just for <strong>you</strong>.
+            </p>
+            <p className="text-xl font-medium text-sky-700">
+              Warmly, The Aloha Massage Spa Team 🌺
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Image Gallery Section with Parallax */}
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2070)',
+          }}
+        />
+        <div className="absolute inset-0 bg-sky-900/70" />
+        <Container className="relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Let Us Spoil You
+            </h2>
+            <p className="text-xl text-sky-100 mb-8">
+              You work hard, deal with "life" every day, and deserve <strong>"you time."</strong>
+              Your experience at Aloha Massage Spa will be like stepping out of life for a moment.
+            </p>
+            <p className="text-2xl font-medium text-cyan-300 mb-10">
+              Be pampered. Be spoiled. Let us help you.
+            </p>
+            <Link href="/services">
+              <Button size="lg" className="bg-white text-sky-700 hover:bg-slate-100">
+                Explore Our Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      {/* Atmosphere Features */}
+      <section className="py-20 bg-gradient-to-b from-sky-50 to-white">
+        <Container>
+          <div className="text-center mb-12">
+            <Badge variant="info" className="mb-4">
+              <Heart className="w-3 h-3 mr-1" />
+              The Experience
+            </Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
+              What Awaits You
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="w-10 h-10 text-sky-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Serene Visuals</h3>
+              <p className="text-slate-600">
+                From the moment you enter, our peaceful decor and soft lighting
+                begin calming your senses.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Leaf className="w-10 h-10 text-sky-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Soothing Aromas</h3>
+              <p className="text-slate-600">
+                Gentle Hawaiian music and delightful aromatherapy create the
+                perfect atmosphere for relaxation.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Heart className="w-10 h-10 text-sky-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Expert Touch</h3>
+              <p className="text-slate-600">
+                Our skilled therapists customize every session to your unique needs,
+                ensuring complete satisfaction.
+              </p>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Let Us Spoil You Section */}
-      <section className="py-20 bg-gradient-to-b from-teal-50 to-white">
+      {/* Owner's Message with Image */}
+      <section className="py-20 bg-white">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div
+                className="aspect-[4/5] rounded-2xl bg-cover bg-center shadow-2xl"
+                style={{
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800)',
+                }}
+              />
+              <div className="absolute -bottom-6 -right-6 bg-sky-600 text-white p-6 rounded-xl shadow-lg">
+                <p className="text-3xl font-bold">15+</p>
+                <p className="text-sky-100">Years Experience</p>
+              </div>
+            </div>
             <div>
               <Badge variant="info" className="mb-4">
                 <Heart className="w-3 h-3 mr-1" />
-                You Deserve This
+                From Our Founder
               </Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-6">
-                Let Us Spoil You
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                A Message from Angela
               </h2>
-              <p className="text-lg text-stone-600 leading-relaxed mb-6">
-                You work hard, find stress you weren't looking for, deal with "life" every day,
-                and deserve <strong>"you time."</strong>
+              <p className="text-lg text-slate-600 leading-relaxed mb-4">
+                As the owner of Aloha Massage Spa, I understand how important it is to
+                take a moment for yourself, whether you're seeking relief from physical
+                aches or just need a brief escape from the daily grind.
               </p>
-              <p className="text-lg text-stone-600 leading-relaxed mb-6">
-                Your experience at Aloha Massage Spa will be like stepping out of life
-                for a few moments, allowing you to recharge and rejuvenate. Even if for
-                only an hour or two, come and enjoy our soothing ambiance and excellent
-                services and get revived!
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                At our spa, we start by calming your senses with serene visuals, soothing
+                sounds, and delightful aromas. This peaceful setting ensures that your visit
+                provides the perfect "me time" that you both need and deserve.
               </p>
-              <p className="text-xl font-medium text-teal-700 mb-8">
-                Be pampered. Be spoiled. Let us help you.
+              <p className="text-xl font-medium text-sky-700">
+                — Angela, Owner & Lead Therapist
               </p>
-              <Link href="/services">
-                <Button size="lg">
-                  Take Me There
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-            </div>
-
-            {/* Atmosphere Features */}
-            <div className="space-y-4">
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-stone-100">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                  <Sparkles className="w-6 h-6 text-teal-600" />
-                </div>
-                <h3 className="font-semibold text-stone-900 mb-2">Serene Visuals</h3>
-                <p className="text-stone-600">
-                  From the moment you enter, our peaceful decor and soft lighting
-                  begin calming your senses.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-stone-100">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                  <Leaf className="w-6 h-6 text-teal-600" />
-                </div>
-                <h3 className="font-semibold text-stone-900 mb-2">Soothing Sounds & Aromas</h3>
-                <p className="text-stone-600">
-                  Gentle Hawaiian music and delightful aromatherapy create the
-                  perfect atmosphere for relaxation.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-stone-100">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-teal-600" />
-                </div>
-                <h3 className="font-semibold text-stone-900 mb-2">Expert Touch</h3>
-                <p className="text-stone-600">
-                  Our skilled therapists customize every session to your unique needs,
-                  ensuring complete satisfaction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Owner's Message */}
-      <section className="py-20 bg-white">
-        <Container>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-stone-50 to-teal-50 rounded-2xl p-8 lg:p-12">
-              <div className="flex flex-col lg:flex-row gap-8 items-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-teal-200 to-teal-300 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-5xl font-bold text-teal-700">A</span>
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold text-stone-900 mb-4">
-                    A Message from Angela
-                  </h2>
-                  <p className="text-stone-600 leading-relaxed mb-4">
-                    As the owner of Aloha Massage Spa, I understand how important it is to
-                    take a moment for yourself, whether you're seeking relief from physical
-                    aches or just need a brief escape from the daily grind.
-                  </p>
-                  <p className="text-stone-600 leading-relaxed mb-4">
-                    At our spa, we start by calming your senses with serene visuals, soothing
-                    sounds, and delightful aromas. This peaceful setting, combined with the
-                    exceptional skills of our trained therapists, ensures that your visit to
-                    Aloha Massage Spa provides the perfect "me time" that you both need and deserve.
-                  </p>
-                  <p className="font-medium text-teal-700 text-lg">
-                    — Angela, Owner & Lead Therapist
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </Container>
@@ -286,7 +320,7 @@ export default function HomePage() {
               <Sparkles className="w-3 h-3 mr-1" />
               Weekly Specials
             </Badge>
-            <h2 className="text-3xl font-bold text-stone-900">
+            <h2 className="text-3xl font-bold text-slate-900">
               Special Days, Special Savings
             </h2>
           </div>
@@ -298,15 +332,15 @@ export default function HomePage() {
                   <Badge variant="warning" size="sm" className="mb-3">
                     {special.day}
                   </Badge>
-                  <h3 className="text-xl font-bold text-stone-900 mb-2">{special.title}</h3>
-                  <p className="text-stone-600 mb-4">{special.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{special.title}</h3>
+                  <p className="text-slate-600 mb-4">{special.description}</p>
                   {special.originalPrice ? (
                     <div className="flex items-center gap-3 mb-2">
-                      <span className="text-stone-400 line-through">{formatPrice(special.originalPrice)}</span>
-                      <span className="text-2xl font-bold text-teal-600">{formatPrice(special.salePrice!)}</span>
+                      <span className="text-slate-400 line-through">{formatPrice(special.originalPrice)}</span>
+                      <span className="text-2xl font-bold text-sky-600">{formatPrice(special.salePrice!)}</span>
                     </div>
                   ) : (
-                    <p className="text-xl font-bold text-teal-600 mb-2">{special.discount}</p>
+                    <p className="text-xl font-bold text-sky-600 mb-2">{special.discount}</p>
                   )}
                   <p className="text-sm text-amber-700 font-medium">{special.bonus}</p>
                 </CardContent>
@@ -325,14 +359,14 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Featured Services */}
+      {/* Featured Services with Images */}
       <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
               Our Signature Services
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Choose your path to relaxation. Each treatment is crafted to restore
               your body, calm your mind, and rejuvenate your spirit.
             </p>
@@ -340,26 +374,27 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service) => (
-              <Card key={service.id} variant="elevated" className="group">
+              <Card key={service.id} variant="elevated" className="group overflow-hidden">
+                <div
+                  className="h-48 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
                 <CardContent>
-                  <div className="h-40 bg-gradient-to-br from-teal-50 to-stone-100 rounded-lg mb-4 flex items-center justify-center">
-                    <Sparkles className="w-12 h-12 text-teal-600 group-hover:scale-110 transition-transform" />
-                  </div>
                   <Badge variant="default" size="sm" className="mb-2">
                     {service.category.replace('_', ' ')}
                   </Badge>
-                  <h3 className="text-lg font-semibold text-stone-900 mb-2">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
                     {service.name}
                   </h3>
-                  <p className="text-stone-600 text-sm mb-4 line-clamp-2">
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-2">
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-stone-500 text-sm">
+                    <div className="flex items-center gap-1 text-slate-500 text-sm">
                       <Clock className="w-4 h-4" />
                       {formatDuration(service.duration)}
                     </div>
-                    <span className="text-lg font-semibold text-teal-600">
+                    <span className="text-lg font-semibold text-sky-600">
                       {formatPrice(service.price)}
                     </span>
                   </div>
@@ -379,27 +414,34 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* The Environment Section */}
-      <section className="py-20 bg-stone-900 text-white">
-        <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Relax in Our Unique Massage Therapy Environment
+      {/* Environment Section with Parallax */}
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070)',
+          }}
+        />
+        <div className="absolute inset-0 bg-slate-900/80" />
+        <Container className="relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Relax in Our Unique Environment
             </h2>
-            <p className="text-lg text-stone-300 leading-relaxed mb-6">
+            <p className="text-xl text-slate-300 leading-relaxed mb-6">
               When you visit us, you'll instantly feel the comfort of Aloha upon
               entering our welcoming lobby. As you step into the therapy area,
               you'll be absorbed by our peaceful atmosphere.
             </p>
-            <p className="text-lg text-stone-300 leading-relaxed mb-8">
+            <p className="text-xl text-slate-300 leading-relaxed mb-8">
               Your mind and soul will begin to relax as a warming calm takes over.
               Your body will now be ready for complete soothing.
             </p>
-            <p className="text-2xl font-medium text-teal-400 mb-10">
+            <p className="text-3xl font-medium text-cyan-400 mb-10">
               Come, Relax with Aloha!
             </p>
             <Link href="/book">
-              <Button size="lg" className="bg-teal-500 hover:bg-teal-600">
+              <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600">
                 I Want to Relax
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -409,13 +451,13 @@ export default function HomePage() {
       </section>
 
       {/* Meet Our Therapists */}
-      <section className="py-20 bg-stone-50">
+      <section className="py-20 bg-slate-50">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
               Meet Our Expert Therapists
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Our team brings decades of combined experience in Hawaiian and
               therapeutic massage techniques.
             </p>
@@ -425,21 +467,21 @@ export default function HomePage() {
             {therapists.map((therapist) => (
               <Card key={therapist.name} variant="elevated">
                 <CardContent className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-teal-200 to-teal-300 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-teal-700">
+                  <div className="w-24 h-24 bg-gradient-to-br from-sky-200 to-sky-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl font-bold text-sky-700">
                       {therapist.name[0]}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-stone-900 mb-1">
+                  <h3 className="text-xl font-semibold text-slate-900 mb-1">
                     {therapist.name}
                   </h3>
-                  <p className="text-teal-600 font-medium text-sm mb-2">
+                  <p className="text-sky-600 font-medium text-sm mb-2">
                     {therapist.title}
                   </p>
-                  <p className="text-stone-500 text-sm mb-4">
+                  <p className="text-slate-500 text-sm mb-4">
                     {therapist.years}+ years experience
                   </p>
-                  <p className="text-stone-600 text-sm">
+                  <p className="text-slate-600 text-sm">
                     {therapist.bio}
                   </p>
                 </CardContent>
@@ -453,14 +495,14 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
               What Our Guests Say
             </h2>
             <div className="flex items-center justify-center gap-2 text-amber-500">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 fill-current" />
               ))}
-              <span className="ml-2 text-stone-600 font-medium">4.9 out of 5</span>
+              <span className="ml-2 text-slate-600 font-medium">4.9 out of 5</span>
             </div>
           </div>
 
@@ -473,13 +515,13 @@ export default function HomePage() {
                       <Star key={i} className="w-5 h-5 text-amber-500 fill-amber-500" />
                     ))}
                   </div>
-                  <p className="text-stone-600 mb-4 italic leading-relaxed">
+                  <p className="text-slate-600 mb-4 italic leading-relaxed">
                     &ldquo;{testimonial.text}&rdquo;
                   </p>
-                  <div className="border-t border-stone-100 pt-4 flex items-center justify-between">
+                  <div className="border-t border-slate-100 pt-4 flex items-center justify-between">
                     <div>
-                      <p className="font-semibold text-stone-900">{testimonial.name}</p>
-                      <p className="text-sm text-stone-500">{testimonial.source}</p>
+                      <p className="font-semibold text-slate-900">{testimonial.name}</p>
+                      <p className="text-sm text-slate-500">{testimonial.source}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -489,20 +531,27 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-teal-600 to-teal-700">
-        <Container>
+      {/* Final CTA with Parallax */}
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=2070)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-700/90 to-sky-600/80" />
+        <Container className="relative z-10">
           <div className="text-center text-white">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               Ready for Your "Me Time"?
             </h2>
-            <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
               Don't wait any longer. You deserve to feel relaxed, renewed, and
               completely at peace. Book your appointment today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book">
-                <Button size="lg" className="bg-white text-teal-700 hover:bg-stone-100 w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-sky-700 hover:bg-slate-100 w-full sm:w-auto text-lg px-10">
                   Book Online Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -511,7 +560,7 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
+                  className="border-white text-white hover:bg-white/10 w-full sm:w-auto text-lg"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   (808) 123-4567

@@ -11,7 +11,7 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     const variants = {
       default: 'bg-white shadow-sm',
       elevated: 'bg-white shadow-lg hover:shadow-xl transition-shadow duration-300',
-      outlined: 'bg-white border border-stone-200',
+      outlined: 'bg-white border border-slate-200',
     };
 
     const paddings = {
@@ -49,14 +49,14 @@ CardHeader.displayName = 'CardHeader';
 
 const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
   ({ className, ...props }, ref) => (
-    <h3 ref={ref} className={cn('text-xl font-semibold text-stone-900', className)} {...props} />
+    <h3 ref={ref} className={cn('text-xl font-semibold text-slate-900', className)} {...props} />
   )
 );
 CardTitle.displayName = 'CardTitle';
 
 const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
   ({ className, ...props }, ref) => (
-    <p ref={ref} className={cn('text-stone-600 mt-1', className)} {...props} />
+    <p ref={ref} className={cn('text-slate-600 mt-1', className)} {...props} />
   )
 );
 CardDescription.displayName = 'CardDescription';
@@ -70,7 +70,7 @@ CardContent.displayName = 'CardContent';
 
 const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn('mt-4 pt-4 border-t border-stone-100', className)} {...props} />
+    <div ref={ref} className={cn('mt-4 pt-4 border-t border-slate-100', className)} {...props} />
   )
 );
 CardFooter.displayName = 'CardFooter';

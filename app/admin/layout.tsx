@@ -31,14 +31,14 @@ export default async function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen bg-stone-100">
+    <div className="min-h-screen bg-slate-100">
       {/* Admin Header */}
-      <header className="bg-stone-900 text-white">
+      <header className="bg-slate-900 text-white">
         <Container>
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
               <Link href="/admin" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">A</span>
                 </div>
                 <span className="font-semibold">Admin Panel</span>
@@ -48,7 +48,7 @@ export default async function AdminLayout({
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-stone-300 hover:text-white hover:bg-stone-800 transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                   >
                     <item.icon className="w-4 h-4" />
                     {item.label}
@@ -57,9 +57,9 @@ export default async function AdminLayout({
               </nav>
             </div>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-stone-400">{user.email}</span>
+              <span className="text-sm text-slate-400">{user.email}</span>
               <form action={handleLogout}>
-                <Button type="submit" variant="ghost" size="sm" className="text-stone-300 hover:text-white">
+                <Button type="submit" variant="ghost" size="sm" className="text-slate-300 hover:text-white">
                   <LogOut className="w-4 h-4" />
                 </Button>
               </form>
@@ -69,14 +69,14 @@ export default async function AdminLayout({
       </header>
 
       {/* Mobile Navigation */}
-      <div className="lg:hidden bg-stone-800 border-t border-stone-700">
+      <div className="lg:hidden bg-slate-800 border-t border-slate-700">
         <Container>
           <nav className="flex overflow-x-auto py-2 gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg text-stone-300 hover:text-white hover:bg-stone-700 transition-colors whitespace-nowrap"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700 transition-colors whitespace-nowrap"
               >
                 <item.icon className="w-4 h-4" />
                 {item.label}

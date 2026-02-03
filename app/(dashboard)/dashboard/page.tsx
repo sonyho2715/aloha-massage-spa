@@ -58,7 +58,7 @@ export default async function DashboardPage() {
       {/* Upcoming Bookings */}
       <section>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-stone-900">Upcoming Appointments</h2>
+          <h2 className="text-xl font-semibold text-slate-900">Upcoming Appointments</h2>
           <Link href="/book">
             <Button size="sm">
               Book New
@@ -70,9 +70,9 @@ export default async function DashboardPage() {
         {upcomingBookings.length === 0 ? (
           <Card variant="outlined">
             <CardContent className="text-center py-12">
-              <Calendar className="w-12 h-12 text-stone-300 mx-auto mb-4" />
-              <h3 className="font-semibold text-stone-900 mb-2">No Upcoming Appointments</h3>
-              <p className="text-stone-600 mb-4">Ready for some relaxation?</p>
+              <Calendar className="w-12 h-12 text-slate-300 mx-auto mb-4" />
+              <h3 className="font-semibold text-slate-900 mb-2">No Upcoming Appointments</h3>
+              <p className="text-slate-600 mb-4">Ready for some relaxation?</p>
               <Link href="/book">
                 <Button>Book Your First Appointment</Button>
               </Link>
@@ -86,12 +86,12 @@ export default async function DashboardPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <h3 className="font-semibold text-stone-900">{booking.service.name}</h3>
+                        <h3 className="font-semibold text-slate-900">{booking.service.name}</h3>
                         <Badge variant={statusColors[booking.status]} size="sm">
                           {statusLabels[booking.status]}
                         </Badge>
                       </div>
-                      <div className="flex flex-wrap gap-4 text-sm text-stone-600">
+                      <div className="flex flex-wrap gap-4 text-sm text-slate-600">
                         <span className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           {formatDate(booking.date)}
@@ -109,7 +109,7 @@ export default async function DashboardPage() {
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
-                      <span className="text-lg font-semibold text-teal-600">
+                      <span className="text-lg font-semibold text-sky-600">
                         {formatPrice(booking.totalPrice)}
                       </span>
                       {booking.status === 'PENDING' && (
@@ -131,7 +131,7 @@ export default async function DashboardPage() {
       {/* Past Bookings */}
       {pastBookings.length > 0 && (
         <section>
-          <h2 className="text-xl font-semibold text-stone-900 mb-4">Past Appointments</h2>
+          <h2 className="text-xl font-semibold text-slate-900 mb-4">Past Appointments</h2>
           <div className="space-y-3">
             {pastBookings.map((booking: BookingWithRelations) => (
               <Card key={booking.id} variant="outlined" padding="sm">
@@ -139,16 +139,16 @@ export default async function DashboardPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-3">
-                        <h3 className="font-medium text-stone-900">{booking.service.name}</h3>
+                        <h3 className="font-medium text-slate-900">{booking.service.name}</h3>
                         <Badge variant={statusColors[booking.status]} size="sm">
                           {statusLabels[booking.status]}
                         </Badge>
                       </div>
-                      <p className="text-sm text-stone-500">
+                      <p className="text-sm text-slate-500">
                         {formatDate(booking.date)} at {formatTime(booking.date)}
                       </p>
                     </div>
-                    <span className="text-stone-600">{formatPrice(booking.totalPrice)}</span>
+                    <span className="text-slate-600">{formatPrice(booking.totalPrice)}</span>
                   </div>
                 </CardContent>
               </Card>

@@ -141,22 +141,22 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 bg-gradient-to-b from-stone-50 to-white">
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="info" className="mb-4">
               <Heart className="w-3 h-3 mr-1" />
               Choose Your Path to Relaxation
             </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold text-stone-900 mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
               Our Services
             </h1>
-            <p className="text-xl text-stone-600 mb-6">
+            <p className="text-xl text-slate-600 mb-6">
               You work hard. You deal with stress every day. Now it's time to take care of <strong>you</strong>.
             </p>
-            <p className="text-lg text-stone-500">
+            <p className="text-lg text-slate-500">
               Browse our treatments below, or call us at{' '}
-              <a href="tel:+18081234567" className="text-teal-600 font-medium hover:underline">
+              <a href="tel:+18081234567" className="text-sky-600 font-medium hover:underline">
                 (808) 123-4567
               </a>
               {' '}and we'll help you find the perfect service for your needs.
@@ -166,14 +166,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Quick Nav */}
-      <section className="py-6 bg-white border-b border-stone-200 sticky top-0 z-40">
+      <section className="py-6 bg-white border-b border-slate-200 sticky top-0 z-40">
         <Container>
           <div className="flex flex-wrap justify-center gap-4">
             {Object.entries(categoryLabels).map(([key, label]) => (
               <a
                 key={key}
                 href={`#${key.toLowerCase()}`}
-                className="px-4 py-2 rounded-full bg-stone-100 text-stone-700 hover:bg-teal-100 hover:text-teal-700 transition-colors text-sm font-medium"
+                className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 hover:bg-sky-100 hover:text-sky-700 transition-colors text-sm font-medium"
               >
                 {label}
               </a>
@@ -187,14 +187,14 @@ export default function ServicesPage() {
         <section
           key={category}
           id={category.toLowerCase()}
-          className="py-16 even:bg-stone-50 scroll-mt-20"
+          className="py-16 even:bg-slate-50 scroll-mt-20"
         >
           <Container>
             <div className="mb-10">
-              <h2 className="text-3xl font-bold text-stone-900 mb-3">
+              <h2 className="text-3xl font-bold text-slate-900 mb-3">
                 {categoryLabels[category as keyof typeof categoryLabels]}
               </h2>
-              <p className="text-lg text-stone-600 max-w-2xl">
+              <p className="text-lg text-slate-600 max-w-2xl">
                 {categoryDescriptions[category as keyof typeof categoryDescriptions]}
               </p>
             </div>
@@ -212,21 +212,21 @@ export default function ServicesPage() {
                   )}
                   <CardContent className="flex-1 flex flex-col">
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-stone-900 mb-2">
+                      <h3 className="text-xl font-semibold text-slate-900 mb-2">
                         {service.name}
                       </h3>
-                      <p className="text-stone-600 mb-4">
+                      <p className="text-slate-600 mb-4">
                         {service.description}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-stone-100">
+                    <div className="pt-4 border-t border-slate-100">
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-2 text-stone-500">
+                        <div className="flex items-center gap-2 text-slate-500">
                           <Clock className="w-4 h-4" />
                           <span>{formatDuration(service.duration)}</span>
                         </div>
-                        <span className="text-2xl font-bold text-teal-600">
+                        <span className="text-2xl font-bold text-sky-600">
                           {formatPrice(service.price)}
                         </span>
                       </div>
@@ -246,20 +246,20 @@ export default function ServicesPage() {
       ))}
 
       {/* Personal Touch CTA */}
-      <section className="py-16 bg-gradient-to-br from-teal-600 to-teal-700">
+      <section className="py-16 bg-gradient-to-br from-sky-600 to-sky-700">
         <Container>
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">Not Sure Which Treatment Is Right for You?</h2>
-            <p className="text-xl text-teal-100 mb-6">
+            <p className="text-xl text-sky-100 mb-6">
               That's okay! Everyone's body is different, and we understand. Give us a call and
               we'll listen to what you're experiencing and recommend the perfect treatment.
             </p>
-            <p className="text-teal-200 mb-8">
+            <p className="text-sky-200 mb-8">
               Our team genuinely cares about helping you feel your best. No pressure, just honest guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+18081234567">
-                <Button size="lg" className="bg-white text-teal-700 hover:bg-stone-100 w-full sm:w-auto">
+                <Button size="lg" className="bg-white text-sky-700 hover:bg-slate-100 w-full sm:w-auto">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (808) 123-4567
                 </Button>

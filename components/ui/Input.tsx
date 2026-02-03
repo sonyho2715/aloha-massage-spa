@@ -16,7 +16,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="block text-sm font-medium text-stone-700 mb-1.5"
+            className="block text-sm font-medium text-slate-700 mb-1.5"
           >
             {label}
           </label>
@@ -28,10 +28,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             'w-full px-4 py-2.5 rounded-lg border transition-colors duration-200',
             'focus:outline-none focus:ring-2 focus:ring-offset-0',
-            'placeholder:text-stone-400',
+            'placeholder:text-slate-400',
             error
               ? 'border-red-500 focus:ring-red-200 focus:border-red-500'
-              : 'border-stone-300 focus:ring-teal-200 focus:border-teal-500',
+              : 'border-slate-300 focus:ring-sky-200 focus:border-sky-500',
             className
           )}
           {...props}
@@ -40,7 +40,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <p className="mt-1.5 text-sm text-red-600">{error}</p>
         )}
         {helperText && !error && (
-          <p className="mt-1.5 text-sm text-stone-500">{helperText}</p>
+          <p className="mt-1.5 text-sm text-slate-500">{helperText}</p>
         )}
       </div>
     );
@@ -64,7 +64,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="block text-sm font-medium text-stone-700 mb-1.5"
+            className="block text-sm font-medium text-slate-700 mb-1.5"
           >
             {label}
           </label>
@@ -75,10 +75,10 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           className={cn(
             'w-full px-4 py-2.5 rounded-lg border transition-colors duration-200',
             'focus:outline-none focus:ring-2 focus:ring-offset-0',
-            'placeholder:text-stone-400 resize-none',
+            'placeholder:text-slate-400 resize-none',
             error
               ? 'border-red-500 focus:ring-red-200 focus:border-red-500'
-              : 'border-stone-300 focus:ring-teal-200 focus:border-teal-500',
+              : 'border-slate-300 focus:ring-sky-200 focus:border-sky-500',
             className
           )}
           {...props}
@@ -87,7 +87,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           <p className="mt-1.5 text-sm text-red-600">{error}</p>
         )}
         {helperText && !error && (
-          <p className="mt-1.5 text-sm text-stone-500">{helperText}</p>
+          <p className="mt-1.5 text-sm text-slate-500">{helperText}</p>
         )}
       </div>
     );

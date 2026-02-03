@@ -4,7 +4,7 @@ import { Container } from './ui';
 
 export function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-300">
+    <footer className="bg-slate-900 text-slate-300">
       <Container>
         {/* Main Footer Content */}
         <div className="py-12 lg:py-16">
@@ -12,18 +12,18 @@ export function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-600 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-lg">A</span>
                 </div>
                 <div>
                   <span className="text-xl font-semibold text-white">Aloha</span>
-                  <span className="text-xl text-teal-400 ml-1">Massage Spa</span>
+                  <span className="text-xl text-cyan-400 ml-1">Massage Spa</span>
                 </div>
               </div>
-              <p className="text-stone-400 mb-2">
+              <p className="text-slate-400 mb-2">
                 Your sanctuary for relaxation and wellness in Honolulu.
               </p>
-              <p className="text-stone-500 text-sm mb-4 italic">
+              <p className="text-slate-500 text-sm mb-4 italic">
                 "You deserve your 'me time.' Let us take care of you."
               </p>
               <div className="flex gap-4">
@@ -31,7 +31,7 @@ export function Footer() {
                   href="https://facebook.com/AlohamassageSpa"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors"
+                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-600 transition-colors"
                   aria-label="Follow us on Facebook"
                 >
                   <Facebook className="w-5 h-5" />
@@ -40,7 +40,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors"
+                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-600 transition-colors"
                   aria-label="Follow us on Instagram"
                 >
                   <Instagram className="w-5 h-5" />
@@ -53,22 +53,22 @@ export function Footer() {
               <h4 className="text-white font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/services" className="hover:text-teal-400 transition-colors">
+                  <Link href="/services" className="hover:text-cyan-400 transition-colors">
                     Our Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/book" className="hover:text-teal-400 transition-colors">
+                  <Link href="/book" className="hover:text-cyan-400 transition-colors">
                     Book Your "Me Time"
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-teal-400 transition-colors">
+                  <Link href="/about" className="hover:text-cyan-400 transition-colors">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-teal-400 transition-colors">
+                  <Link href="/contact" className="hover:text-cyan-400 transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -80,22 +80,22 @@ export function Footer() {
               <h4 className="text-white font-semibold mb-4">Popular Services</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/services#massage" className="hover:text-teal-400 transition-colors">
+                  <Link href="/services#massage" className="hover:text-cyan-400 transition-colors">
                     Lomi Lomi Massage
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#massage" className="hover:text-teal-400 transition-colors">
+                  <Link href="/services#massage" className="hover:text-cyan-400 transition-colors">
                     Deep Tissue Massage
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#package" className="hover:text-teal-400 transition-colors">
+                  <Link href="/services#package" className="hover:text-cyan-400 transition-colors">
                     Couples Retreat
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services#facial" className="hover:text-teal-400 transition-colors">
+                  <Link href="/services#facial" className="hover:text-cyan-400 transition-colors">
                     Tropical Facial
                   </Link>
                 </li>
@@ -107,23 +107,23 @@ export function Footer() {
               <h4 className="text-white font-semibold mb-4">Visit Us</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <span>123 Kalakaua Ave<br />Honolulu, HI 96815</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <a href="tel:+18081234567" className="hover:text-teal-400 transition-colors">
+                  <Phone className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <a href="tel:+18081234567" className="hover:text-cyan-400 transition-colors">
                     (808) 123-4567
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-teal-400 flex-shrink-0" />
-                  <a href="mailto:aloha@massagespa.com" className="hover:text-teal-400 transition-colors">
+                  <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <a href="mailto:aloha@massagespa.com" className="hover:text-cyan-400 transition-colors">
                     aloha@massagespa.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <span>
                     Mon - Sat: 9am - 8pm<br />
                     Sun: 10am - 6pm
@@ -135,17 +135,17 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-stone-800 py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-stone-500">
+        <div className="border-t border-slate-800 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
             <p className="flex items-center gap-1">
               &copy; {new Date().getFullYear()} Aloha Massage Spa. Made with{' '}
-              <Heart className="w-4 h-4 text-teal-500 fill-teal-500" /> in Hawaii.
+              <Heart className="w-4 h-4 text-orange-500 fill-orange-500" /> in Hawaii.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-stone-300 transition-colors">
+              <Link href="/privacy" className="hover:text-slate-300 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-stone-300 transition-colors">
+              <Link href="/terms" className="hover:text-slate-300 transition-colors">
                 Terms of Service
               </Link>
             </div>

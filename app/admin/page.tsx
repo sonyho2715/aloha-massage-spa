@@ -71,7 +71,7 @@ export default async function AdminDashboard() {
       label: "Today's Appointments",
       value: todayBookings.toString(),
       icon: Calendar,
-      color: 'text-teal-600 bg-teal-100',
+      color: 'text-sky-600 bg-sky-100',
       href: '/admin/bookings?date=today',
     },
     {
@@ -108,8 +108,8 @@ export default async function AdminDashboard() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-stone-900">Dashboard</h1>
-        <p className="text-stone-600">Welcome to your admin panel</p>
+        <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
+        <p className="text-slate-600">Welcome to your admin panel</p>
       </div>
 
       {/* Stats Grid */}
@@ -120,8 +120,8 @@ export default async function AdminDashboard() {
               <CardContent>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-stone-600">{stat.label}</p>
-                    <p className="text-2xl font-bold text-stone-900 mt-1">{stat.value}</p>
+                    <p className="text-sm text-slate-600">{stat.label}</p>
+                    <p className="text-2xl font-bold text-slate-900 mt-1">{stat.value}</p>
                   </div>
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${stat.color}`}>
                     <stat.icon className="w-6 h-6" />
@@ -137,7 +137,7 @@ export default async function AdminDashboard() {
       <Card variant="elevated">
         <CardContent>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-lg font-semibold text-stone-900">Upcoming Bookings</h2>
+            <h2 className="text-lg font-semibold text-slate-900">Upcoming Bookings</h2>
             <Link href="/admin/bookings">
               <Button variant="ghost" size="sm">
                 View All
@@ -147,39 +147,39 @@ export default async function AdminDashboard() {
           </div>
 
           {recentBookings.length === 0 ? (
-            <div className="text-center py-8 text-stone-500">
+            <div className="text-center py-8 text-slate-500">
               No upcoming bookings
             </div>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-stone-200">
-                    <th className="text-left py-3 px-4 text-sm font-medium text-stone-500">Customer</th>
-                    <th className="text-left py-3 px-4 text-sm font-medium text-stone-500">Service</th>
-                    <th className="text-left py-3 px-4 text-sm font-medium text-stone-500">Date & Time</th>
-                    <th className="text-left py-3 px-4 text-sm font-medium text-stone-500">Therapist</th>
-                    <th className="text-left py-3 px-4 text-sm font-medium text-stone-500">Status</th>
-                    <th className="text-right py-3 px-4 text-sm font-medium text-stone-500">Actions</th>
+                  <tr className="border-b border-slate-200">
+                    <th className="text-left py-3 px-4 text-sm font-medium text-slate-500">Customer</th>
+                    <th className="text-left py-3 px-4 text-sm font-medium text-slate-500">Service</th>
+                    <th className="text-left py-3 px-4 text-sm font-medium text-slate-500">Date & Time</th>
+                    <th className="text-left py-3 px-4 text-sm font-medium text-slate-500">Therapist</th>
+                    <th className="text-left py-3 px-4 text-sm font-medium text-slate-500">Status</th>
+                    <th className="text-right py-3 px-4 text-sm font-medium text-slate-500">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {recentBookings.map((booking: AdminBooking) => (
-                    <tr key={booking.id} className="border-b border-stone-100 hover:bg-stone-50">
+                    <tr key={booking.id} className="border-b border-slate-100 hover:bg-slate-50">
                       <td className="py-3 px-4">
                         <div>
-                          <p className="font-medium text-stone-900">{booking.user.name}</p>
-                          <p className="text-sm text-stone-500">{booking.user.email}</p>
+                          <p className="font-medium text-slate-900">{booking.user.name}</p>
+                          <p className="text-sm text-slate-500">{booking.user.email}</p>
                         </div>
                       </td>
                       <td className="py-3 px-4">
-                        <p className="text-stone-900">{booking.service.name}</p>
+                        <p className="text-slate-900">{booking.service.name}</p>
                       </td>
                       <td className="py-3 px-4">
-                        <p className="text-stone-900">{formatDate(booking.date)}</p>
-                        <p className="text-sm text-stone-500">{formatTime(booking.date)}</p>
+                        <p className="text-slate-900">{formatDate(booking.date)}</p>
+                        <p className="text-sm text-slate-500">{formatTime(booking.date)}</p>
                       </td>
-                      <td className="py-3 px-4 text-stone-600">
+                      <td className="py-3 px-4 text-slate-600">
                         {booking.therapist?.name || 'Any'}
                       </td>
                       <td className="py-3 px-4">
@@ -204,40 +204,40 @@ export default async function AdminDashboard() {
       {/* Quick Actions */}
       <div className="grid sm:grid-cols-3 gap-4">
         <Link href="/admin/bookings/new">
-          <Card variant="outlined" className="hover:border-teal-300 transition-colors cursor-pointer">
+          <Card variant="outlined" className="hover:border-sky-300 transition-colors cursor-pointer">
             <CardContent className="flex items-center gap-4">
-              <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-teal-600" />
+              <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center">
+                <Calendar className="w-5 h-5 text-sky-600" />
               </div>
               <div>
-                <p className="font-medium text-stone-900">New Booking</p>
-                <p className="text-sm text-stone-500">Create a walk-in booking</p>
+                <p className="font-medium text-slate-900">New Booking</p>
+                <p className="text-sm text-slate-500">Create a walk-in booking</p>
               </div>
             </CardContent>
           </Card>
         </Link>
         <Link href="/admin/customers/new">
-          <Card variant="outlined" className="hover:border-teal-300 transition-colors cursor-pointer">
+          <Card variant="outlined" className="hover:border-sky-300 transition-colors cursor-pointer">
             <CardContent className="flex items-center gap-4">
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                 <Users className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <p className="font-medium text-stone-900">Add Customer</p>
-                <p className="text-sm text-stone-500">Register a new customer</p>
+                <p className="font-medium text-slate-900">Add Customer</p>
+                <p className="text-sm text-slate-500">Register a new customer</p>
               </div>
             </CardContent>
           </Card>
         </Link>
         <Link href="/admin/services/new">
-          <Card variant="outlined" className="hover:border-teal-300 transition-colors cursor-pointer">
+          <Card variant="outlined" className="hover:border-sky-300 transition-colors cursor-pointer">
             <CardContent className="flex items-center gap-4">
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
                 <TrendingUp className="w-5 h-5 text-purple-600" />
               </div>
               <div>
-                <p className="font-medium text-stone-900">New Service</p>
-                <p className="text-sm text-stone-500">Add a service offering</p>
+                <p className="font-medium text-slate-900">New Service</p>
+                <p className="text-sm text-slate-500">Add a service offering</p>
               </div>
             </CardContent>
           </Card>

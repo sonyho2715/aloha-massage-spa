@@ -30,13 +30,13 @@ export default async function DashboardLayout({
   }
 
   return (
-    <div className="min-h-[80vh] bg-stone-50">
-      <div className="bg-white border-b border-stone-200">
+    <div className="min-h-[80vh] bg-slate-50">
+      <div className="bg-white border-b border-slate-200">
         <Container>
           <div className="flex items-center justify-between py-4">
             <div>
-              <h1 className="text-xl font-semibold text-stone-900">My Account</h1>
-              <p className="text-sm text-stone-600">Welcome back, {user.name}</p>
+              <h1 className="text-xl font-semibold text-slate-900">My Account</h1>
+              <p className="text-sm text-slate-600">Welcome back, {user.name}</p>
             </div>
             <div className="flex items-center gap-4">
               <Link href="/book">
@@ -63,7 +63,7 @@ export default async function DashboardLayout({
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="flex items-center gap-3 px-4 py-3 rounded-lg text-stone-600 hover:bg-stone-50 hover:text-teal-600 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-sky-600 transition-colors"
                     >
                       <item.icon className="w-5 h-5" />
                       {item.label}

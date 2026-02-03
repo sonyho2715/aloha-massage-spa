@@ -105,7 +105,7 @@ export default function BookingPage() {
       case 'service':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-stone-900 mb-6">Select a Service</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Select a Service</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {services.map((s) => (
                 <Card
@@ -113,14 +113,14 @@ export default function BookingPage() {
                   variant={selectedService === s.id ? 'elevated' : 'outlined'}
                   padding="sm"
                   className={`cursor-pointer transition-all ${
-                    selectedService === s.id ? 'ring-2 ring-teal-500' : 'hover:border-teal-300'
+                    selectedService === s.id ? 'ring-2 ring-sky-500' : 'hover:border-sky-300'
                   }`}
                   onClick={() => setSelectedService(s.id)}
                 >
                   <CardContent className="flex justify-between items-center">
                     <div>
-                      <h3 className="font-semibold text-stone-900">{s.name}</h3>
-                      <div className="flex items-center gap-3 text-sm text-stone-500 mt-1">
+                      <h3 className="font-semibold text-slate-900">{s.name}</h3>
+                      <div className="flex items-center gap-3 text-sm text-slate-500 mt-1">
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
                           {formatDuration(s.duration)}
@@ -128,7 +128,7 @@ export default function BookingPage() {
                         <Badge size="sm">{s.category}</Badge>
                       </div>
                     </div>
-                    <span className="text-lg font-bold text-teal-600">
+                    <span className="text-lg font-bold text-sky-600">
                       {formatPrice(s.price)}
                     </span>
                   </CardContent>
@@ -151,11 +151,11 @@ export default function BookingPage() {
       case 'datetime':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-stone-900 mb-6">Choose Date & Time</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Choose Date & Time</h2>
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <label className="block text-sm font-medium text-stone-700 mb-2">
+                <label className="block text-sm font-medium text-slate-700 mb-2">
                   <Calendar className="w-4 h-4 inline mr-2" />
                   Select Date
                 </label>
@@ -164,12 +164,12 @@ export default function BookingPage() {
                   min={minDateStr}
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-stone-300 focus:ring-2 focus:ring-teal-200 focus:border-teal-500"
+                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-200 focus:border-sky-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-stone-700 mb-2">
+                <label className="block text-sm font-medium text-slate-700 mb-2">
                   <Clock className="w-4 h-4 inline mr-2" />
                   Select Time
                 </label>
@@ -180,8 +180,8 @@ export default function BookingPage() {
                       onClick={() => setSelectedTime(time)}
                       className={`py-2 px-3 rounded-lg text-sm font-medium transition-all ${
                         selectedTime === time
-                          ? 'bg-teal-600 text-white'
-                          : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                          ? 'bg-sky-600 text-white'
+                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                       }`}
                     >
                       {time}
@@ -192,7 +192,7 @@ export default function BookingPage() {
             </div>
 
             <div className="mt-8">
-              <label className="block text-sm font-medium text-stone-700 mb-2">
+              <label className="block text-sm font-medium text-slate-700 mb-2">
                 <User className="w-4 h-4 inline mr-2" />
                 Preferred Therapist (Optional)
               </label>
@@ -201,8 +201,8 @@ export default function BookingPage() {
                   onClick={() => setSelectedTherapist(null)}
                   className={`py-3 px-4 rounded-lg text-sm font-medium transition-all ${
                     !selectedTherapist
-                      ? 'bg-teal-600 text-white'
-                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                      ? 'bg-sky-600 text-white'
+                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                   }`}
                 >
                   No Preference
@@ -213,12 +213,12 @@ export default function BookingPage() {
                     onClick={() => setSelectedTherapist(t.id)}
                     className={`py-3 px-4 rounded-lg text-sm font-medium transition-all text-left ${
                       selectedTherapist === t.id
-                        ? 'bg-teal-600 text-white'
-                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                        ? 'bg-sky-600 text-white'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                     }`}
                   >
                     <div>{t.name}</div>
-                    <div className={`text-xs ${selectedTherapist === t.id ? 'text-teal-100' : 'text-stone-500'}`}>
+                    <div className={`text-xs ${selectedTherapist === t.id ? 'text-sky-100' : 'text-slate-500'}`}>
                       {t.specialty}
                     </div>
                   </button>
@@ -246,38 +246,38 @@ export default function BookingPage() {
       case 'details':
         return (
           <div>
-            <h2 className="text-2xl font-bold text-stone-900 mb-6">Additional Details</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">Additional Details</h2>
 
             {/* Booking Summary */}
             <Card variant="outlined" className="mb-6">
               <CardContent>
-                <h3 className="font-semibold text-stone-900 mb-3">Booking Summary</h3>
+                <h3 className="font-semibold text-slate-900 mb-3">Booking Summary</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Service:</span>
+                    <span className="text-slate-600">Service:</span>
                     <span className="font-medium">{service?.name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Duration:</span>
+                    <span className="text-slate-600">Duration:</span>
                     <span>{service && formatDuration(service.duration)}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Date:</span>
+                    <span className="text-slate-600">Date:</span>
                     <span>{selectedDate && new Date(selectedDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Time:</span>
+                    <span className="text-slate-600">Time:</span>
                     <span>{selectedTime}</span>
                   </div>
                   {therapist && (
                     <div className="flex justify-between">
-                      <span className="text-stone-600">Therapist:</span>
+                      <span className="text-slate-600">Therapist:</span>
                       <span>{therapist.name}</span>
                     </div>
                   )}
-                  <div className="flex justify-between pt-2 border-t border-stone-100 text-base">
+                  <div className="flex justify-between pt-2 border-t border-slate-100 text-base">
                     <span className="font-semibold">Total:</span>
-                    <span className="font-bold text-teal-600">{service && formatPrice(service.price)}</span>
+                    <span className="font-bold text-sky-600">{service && formatPrice(service.price)}</span>
                   </div>
                 </div>
               </CardContent>
@@ -325,8 +325,8 @@ export default function BookingPage() {
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Check className="w-10 h-10 text-green-600" />
             </div>
-            <h2 className="text-3xl font-bold text-stone-900 mb-4">Booking Confirmed!</h2>
-            <p className="text-lg text-stone-600 mb-8 max-w-md mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Booking Confirmed!</h2>
+            <p className="text-lg text-slate-600 mb-8 max-w-md mx-auto">
               We&apos;ve sent a confirmation email with your appointment details.
               We look forward to seeing you!
             </p>
@@ -334,15 +334,15 @@ export default function BookingPage() {
               <CardContent>
                 <div className="text-left space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Service:</span>
+                    <span className="text-slate-600">Service:</span>
                     <span className="font-medium">{service?.name}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Date:</span>
+                    <span className="text-slate-600">Date:</span>
                     <span>{selectedDate && new Date(selectedDate + 'T00:00:00').toLocaleDateString()}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-stone-600">Time:</span>
+                    <span className="text-slate-600">Time:</span>
                     <span>{selectedTime}</span>
                   </div>
                 </div>
@@ -372,10 +372,10 @@ export default function BookingPage() {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     step === s
-                      ? 'bg-teal-600 text-white'
+                      ? 'bg-sky-600 text-white'
                       : ['service', 'datetime', 'details'].indexOf(step) > i
-                      ? 'bg-teal-100 text-teal-700'
-                      : 'bg-stone-200 text-stone-500'
+                      ? 'bg-sky-100 text-sky-700'
+                      : 'bg-slate-200 text-slate-500'
                   }`}
                 >
                   {i + 1}
@@ -384,8 +384,8 @@ export default function BookingPage() {
                   <div
                     className={`w-12 h-1 mx-2 ${
                       ['service', 'datetime', 'details'].indexOf(step) > i
-                        ? 'bg-teal-600'
-                        : 'bg-stone-200'
+                        ? 'bg-sky-600'
+                        : 'bg-slate-200'
                     }`}
                   />
                 )}

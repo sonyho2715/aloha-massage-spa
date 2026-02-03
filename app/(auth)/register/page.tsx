@@ -40,10 +40,10 @@ export default function RegisterPage() {
   return (
     <Card variant="elevated">
       <CardContent>
-        <h1 className="text-2xl font-bold text-stone-900 text-center mb-2">
+        <h1 className="text-2xl font-bold text-slate-900 text-center mb-2">
           Create Your Account
         </h1>
-        <p className="text-stone-600 text-center mb-6">
+        <p className="text-slate-600 text-center mb-6">
           Join us and start booking your wellness journey
         </p>
 
@@ -104,15 +104,15 @@ export default function RegisterPage() {
               type="checkbox"
               name="terms"
               required
-              className="w-4 h-4 mt-1 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+              className="w-4 h-4 mt-1 rounded border-slate-300 text-sky-600 focus:ring-sky-500"
             />
-            <span className="text-sm text-stone-600">
+            <span className="text-sm text-slate-600">
               I agree to the{' '}
-              <Link href="/terms" className="text-teal-600 hover:text-teal-700">
+              <Link href="/terms" className="text-sky-600 hover:text-sky-700">
                 Terms of Service
               </Link>{' '}
               and{' '}
-              <Link href="/privacy" className="text-teal-600 hover:text-teal-700">
+              <Link href="/privacy" className="text-sky-600 hover:text-sky-700">
                 Privacy Policy
               </Link>
             </span>
@@ -124,9 +124,9 @@ export default function RegisterPage() {
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-stone-600">
+          <p className="text-slate-600">
             Already have an account?{' '}
-            <Link href="/login" className="text-teal-600 hover:text-teal-700 font-medium">
+            <Link href="/login" className="text-sky-600 hover:text-sky-700 font-medium">
               Sign in
             </Link>
           </p>

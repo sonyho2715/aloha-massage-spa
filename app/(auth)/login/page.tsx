@@ -29,10 +29,10 @@ export default function LoginPage() {
   return (
     <Card variant="elevated">
       <CardContent>
-        <h1 className="text-2xl font-bold text-stone-900 text-center mb-2">
+        <h1 className="text-2xl font-bold text-slate-900 text-center mb-2">
           Welcome Back
         </h1>
-        <p className="text-stone-600 text-center mb-6">
+        <p className="text-slate-600 text-center mb-6">
           Sign in to manage your appointments
         </p>
 
@@ -65,13 +65,13 @@ export default function LoginPage() {
               <input
                 type="checkbox"
                 name="remember"
-                className="w-4 h-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+                className="w-4 h-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500"
               />
-              <span className="text-sm text-stone-600">Remember me</span>
+              <span className="text-sm text-slate-600">Remember me</span>
             </label>
             <Link
               href="/forgot-password"
-              className="text-sm text-teal-600 hover:text-teal-700"
+              className="text-sm text-sky-600 hover:text-sky-700"
             >
               Forgot password?
             </Link>
@@ -83,9 +83,9 @@ export default function LoginPage() {
         </form>
 
         <div className="mt-6 text-center">
-          <p className="text-stone-600">
+          <p className="text-slate-600">
             Don&apos;t have an account?{' '}
-            <Link href="/register" className="text-teal-600 hover:text-teal-700 font-medium">
+            <Link href="/register" className="text-sky-600 hover:text-sky-700 font-medium">
               Create one
             </Link>
           </p>

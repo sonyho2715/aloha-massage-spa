@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Warm spa color palette */
-  --background: #faf9f7;
-  --foreground: #1c1917;
+  /* Ocean Blues - Hawaiian Beach Theme */
+  --background: #faf8f5;
+  --foreground: #0c3547;
 
   /* Brand colors */
-  --teal-primary: #0d9488;
-  --teal-dark: #0f766e;
-  --amber-accent: #f59e0b;
-  --stone-warm: #78716c;
+  --ocean-deep: #0c4a6e;
+  --ocean-primary: #0369a1;
+  --ocean-light: #0ea5e9;
+  --seafoam: #2dd4bf;
+  --seafoam-light: #5eead4;
+  --sand: #d4a574;
+  --sand-light: #fef3e2;
+  --coral: #f97316;
+  --sunset: #fb923c;
 }
 
 @theme inline {
@@ -32,13 +37,13 @@ html {
 
 /* Custom selection color */
 ::selection {
-  background-color: #99f6e4;
-  color: #0f766e;
+  background-color: #a5f3fc;
+  color: #0c4a6e;
 }
 
 /* Focus visible styles */
 *:focus-visible {
-  outline: 2px solid #14b8a6;
+  outline: 2px solid #0ea5e9;
   outline-offset: 2px;
 }
 
@@ -52,19 +57,19 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d6d3d1;
+  background: #94a3b8;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a29e;
+  background: #64748b;
 }
 
 /* Animation utilities */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -72,22 +77,69 @@ html {
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Gradient text utility */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Parallax background for sections using bg-fixed */
+@supports (background-attachment: fixed) {
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+}
+
+/* Fallback for mobile where bg-fixed can be janky */
+@media (max-width: 768px) {
+  .bg-fixed {
+    background-attachment: scroll;
+  }
+}
+
+/* Gradient text utility - Ocean theme */
 .text-gradient {
-  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 50%, #2dd4bf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Hero background pattern */
+/* Hero background pattern - Ocean waves */
 .hero-pattern {
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 40% 80%, rgba(20, 184, 166, 0.05) 0%, transparent 45%);
+    radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(45, 212, 191, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 40% 80%, rgba(249, 115, 22, 0.05) 0%, transparent 45%);
+}
+
+/* Wave decoration */
+.wave-pattern {
+  background: linear-gradient(180deg, transparent 0%, rgba(14, 165, 233, 0.03) 100%);
 }
