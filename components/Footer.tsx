@@ -1,11 +1,12 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Heart } from 'lucide-react';
 import { Container } from './ui';
 
 export function Footer() {
   return (
     <footer className="bg-stone-900 text-stone-300">
       <Container>
+        {/* Main Footer Content */}
         <div className="py-12 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand */}
@@ -19,16 +20,19 @@ export function Footer() {
                   <span className="text-xl text-teal-400 ml-1">Massage Spa</span>
                 </div>
               </div>
-              <p className="text-stone-400 mb-4">
-                Experience the true spirit of Aloha with authentic Hawaiian healing and relaxation.
+              <p className="text-stone-400 mb-2">
+                Your sanctuary for relaxation and wellness in Honolulu.
+              </p>
+              <p className="text-stone-500 text-sm mb-4 italic">
+                "You deserve your 'me time.' Let us take care of you."
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/AlohamassageSpa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors"
-                  aria-label="Facebook"
+                  aria-label="Follow us on Facebook"
                 >
                   <Facebook className="w-5 h-5" />
                 </a>
@@ -37,7 +41,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-teal-600 transition-colors"
-                  aria-label="Instagram"
+                  aria-label="Follow us on Instagram"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
@@ -55,7 +59,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/book" className="hover:text-teal-400 transition-colors">
-                    Book Appointment
+                    Book Your "Me Time"
                   </Link>
                 </li>
                 <li>
@@ -73,26 +77,26 @@ export function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Services</h4>
+              <h4 className="text-white font-semibold mb-4">Popular Services</h4>
               <ul className="space-y-3">
                 <li>
                   <Link href="/services#massage" className="hover:text-teal-400 transition-colors">
-                    Massage Therapy
+                    Lomi Lomi Massage
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services#massage" className="hover:text-teal-400 transition-colors">
+                    Deep Tissue Massage
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services#package" className="hover:text-teal-400 transition-colors">
+                    Couples Retreat
                   </Link>
                 </li>
                 <li>
                   <Link href="/services#facial" className="hover:text-teal-400 transition-colors">
-                    Facials
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services#body" className="hover:text-teal-400 transition-colors">
-                    Body Treatments
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services#packages" className="hover:text-teal-400 transition-colors">
-                    Packages
+                    Tropical Facial
                   </Link>
                 </li>
               </ul>
@@ -100,7 +104,7 @@ export function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-white font-semibold mb-4">Contact Us</h4>
+              <h4 className="text-white font-semibold mb-4">Visit Us</h4>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
@@ -133,7 +137,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-stone-800 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-stone-500">
-            <p>&copy; {new Date().getFullYear()} Aloha Massage Spa. All rights reserved.</p>
+            <p className="flex items-center gap-1">
+              &copy; {new Date().getFullYear()} Aloha Massage Spa. Made with{' '}
+              <Heart className="w-4 h-4 text-teal-500 fill-teal-500" /> in Hawaii.
+            </p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-stone-300 transition-colors">
                 Privacy Policy
